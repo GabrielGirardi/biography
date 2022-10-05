@@ -5,11 +5,11 @@ setInterval( function() {
     const wel = document.querySelector('#welcome-us');
     const bem = document.querySelector('#bem-vindo-pt');
 
-    if (wel.style.display === "block") {
+    if (wel.style.display === "flex") {
         wel.style.display = "none";
-        bem.style.display = "block";
+        bem.style.display = "flex";
     } else {
-        wel.style.display = "block";
+        wel.style.display = "flex";
         bem.style.display = "none";
     }
 
@@ -19,15 +19,26 @@ setInterval( function() {
 
 window.onload = function() {
     const button = document.querySelector(".menu-lateral");
-    const menu = document.querySelector(".container-menu");
+    let menu = document.querySelector(".container-menu");
 
     button.addEventListener("click", function() {
-        if (menu.style.display === "none") {
-            menu.style.display = "block";
+        if (menu.style.opacity === "0") {
+            menu.style.opacity = "1";
         } else {
-            menu.style.display = "none";
+            menu.style.opacity = "0";
         }
     });
+
+    const more = document.querySelector(".more");
+    let languages = document.querySelector(".languages-content");
+
+    more.onclick = function() {
+        if (languages.style.opacity === "0") {
+            languages.style.opacity = "1";
+        } else {
+            languages.style.opacity = "0";
+        }
+    }
 }
 
 

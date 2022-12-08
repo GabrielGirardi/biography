@@ -2,121 +2,67 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Home - GG</title>
-    <link rel="shortcut icon" href="./assets/logo/logo-gg.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./assets/logo/gg.webp" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/functions.js"></script>
+    <title>Página Principal</title>
 </head>
 <body>
-<header>
-    <div class="header-top">
-        <div class="container">
-            <div class="contact">
-                <a id="whatsapp-header"
-                   href="https://api.whatsapp.com/send?phone=5547997135921&text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20pelo%20seu%20portf%C3%B3lio"
-                   target="_blank">
-                    <img src="https://imagepng.org/wp-content/uploads/2017/08/WhatsApp-icone-3.png" alt="Whatsapp"
-                         title="Whatsapp" width="24" height="24">
-                </a>
-                <a id="linkedin-header" href="https://www.linkedin.com/in/ggirardii/" target="_blank">
-                    <img src="./image/linkedin.png" alt="Linekdin" title="Linkedin" width="24" height="24">
-                </a>
-                <a id="instagram"
-                   href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiBotj0trr5AhUjGLkGHa6JD1cQFnoECAMQAQ&url=https%3A%2F%2Finstagram.com%2Fgabriell_girardii%3Figshid%3D1bgl92ni6bkjt&usg=AOvVaw3HI_oJYERM1Ub1Dz1W5Mk7"
-                   target="_blank">
-                    <img src="./image/instagram.webp" alt="Instagram" title="Instagram" width="24" height="24">
-                </a>
-            </div>
-            <div class="welcome">
-                <h4 class="text-welcome" id="bem-vindo-pt">
-                    Bem Vindos
-                    <img
-                            src="./image/bra.png"
-                            alt="Brasil"
-                            width="16"
-                            height="16"
-                    />
-                </h4>
-            </div>
-            <div class="menu-container">
-                <img src="./assets/props/menu-hambur.svg" alt="menu">
-            </div>
-        </div>
-    </div>
-</header>
-<section>
-    <div class="presentation">
-        <div class="container">
-            <div class="info-introduction">
-                <h2 id="hello">Olá, eu sou</h2>
-                <h1 id="name">Gabriel Girardi</h1>
-                <h3 id="job">Desenvolvedor Front-end</h3>
-                <div id="start-btn">
-                    <img src="./assets/props/arrow-menu-right.svg" alt="initial" width="16" height="16">
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <ul class="header-menu-container">
+                        <li class="header-options" id="main">Página Principal</li>
+                        <li class="header-options" id="about">Sobre Mim</li>
+                        <li class="header-options" id="languages">Linguagens</li>
+                        <li class="header-options" id="projects">Projetos</li>
+                        <li class="header-options" id="social">Social</li>
+                    </ul>
+                    <div class="home">
+                        <img src="./assets/props/home.svg" alt="Retornar a home"/ width="16" height="16">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="git-block">
-        <div class="git-top">
-            <div class="container-buttons">
-                <div class="button-1"></div>
-                <div class="button-2"></div>
-                <div class="button-3"></div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="header-middle-content">
+                    <div class="logo">
+                        <img src="./assets/logo/gg.webp" alt="Logo GG" width="48" height="48">
+                    </div>
+                    <div class="search">
+                        <div class="icon-search">
+                            <img clas="open active" src="./assets/props/icon-search.svg" alt="Pesquisa" width="22" height="22"/>
+                        </div>
+                        <input type="text" id="search-bar" class="search-bar" onkeyup="myFunction()" placeholder="Pesquise aqui...">
+                        <div class="filter-box">
+                            <ul id="myUL">
+                                <li><a href="#">Adele</a></li>
+                                <li><a href="#">Agnes</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bob</a></li>
+                                <li><a href="#">Calvin</a></li>
+                                <li><a href="#">Christina</a></li>
+                                <li><a href="#">Cindy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="git-content">
-            <div class="image-container">
-                <img
-                        src="https://avatars.githubusercontent.com/u/88117217?v=4"
-                        class="profile-picture"
-                        alt="Minha foto"
-                        width="200"
-                        height="200"
-                />
-                <a href="https://github.com/GabrielGirardi" class="github">
-                    <img
-                            src="./image/git.png"
-                            alt="Github"
-                            title="Github"
-                            width="36"
-                            height="36"
-                    />
-                </a>
-            </div>
-            <p class="text-apresentation">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam
-                aspernatur, aut delectus doloremque doloribus et fugiat in ipsum modi nobis odit possimus recusandae
-                tempora tempore, temporibus ullam unde veniam.</p>
-            <span class="more" onselectstart="return false">+</span>
-        </div>
-        <div class="languages-content" style="opacity: 0">
-            <div class="html">
-                Javascript
-            </div>
-            <div class="css">
-                CSS
-            </div>
-            <div class="js">
-                HTML
-            </div>
-            <div class="scss">
-                SCSS
-            </div>
-            <div class="java">
-                Java
-            </div>
-            <div class="react">
-                React
-            </div>
-            <div class="node">
-                Node
+        <div class="header-bottom"><div class="container"></div></div>
+    </header>
+    <section>
+        <div class="landing-page">
+            <div class="container">
+            
             </div>
         </div>
-    </div>
-</section>
-<footer>
-</footer>
+    </section>
 </body>
 </html>

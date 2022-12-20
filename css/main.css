@@ -16,7 +16,7 @@
 .header-top {
   display: flex;
   align-items: center;
-  background: linear-gradient(315deg, #ffbc00, #ff0058);
+  background: #d9d9d9;
   height: 30px;
   width: 100%;
   position: fixed;
@@ -46,109 +46,76 @@
   align-items: center;
 }
 
-.header-middle {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  margin-top: 30px;
-  background-color: var(--color-black);
-}
-.header-middle .header-middle-content {
-  display: flex;
-  justify-content: space-between;
-}
-.header-middle .header-middle-content .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(315deg, #ffbc00, #ff0058);
-}
-.header-middle .header-middle-content .logo .logo-img {
-  width: 50px;
-  height: 50px;
-}
-.header-middle .header-middle-content .logo .logo-text {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-black);
-}
-.header-middle .header-middle-content .search {
-  display: flex;
-  align-items: center;
-  position: relative;
-  gap: 12px;
-}
-.header-middle .header-middle-content .search .icon-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(315deg, #ffbc00, #ff0058);
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--color-black);
-  border-radius: 50%;
-}
-.header-middle .header-middle-content .search .icon-search:hover {
-  cursor: pointer;
-}
-.header-middle .header-middle-content .search .icon-search:active {
-  background: linear-gradient(315deg, #ff0058, #ffbc00);
-}
-.header-middle .header-middle-content .search .search-bar {
-  position: relative;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  padding: 0 6px;
-  border: none;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-.header-middle .header-middle-content .search .search-bar.active {
-  opacity: 1;
-  width: 267px;
-  height: 30px;
-}
-.header-middle .header-middle-content .search .search-bar:focus {
-  outline: none;
-}
-.header-middle .header-middle-content .search .filter-box {
-  position: absolute;
-  top: 41px;
-  right: -1px;
-  z-index: 9;
-  width: 0;
-  max-height: 0;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-}
-.header-middle .header-middle-content .search .filter-box.active {
-  width: 269px;
-  max-height: 200px;
-}
-.header-middle .header-middle-content .search .filter-box ul {
-  height: 100%;
-  width: 100%;
-  padding: 10px;
-  border-radius: 0 0 5px 5px;
-  border: 1px solid;
-  border-top: 0;
-  background: #fff;
-}
-
 .header-bottom {
+  margin-top: 30px;
   width: 100%;
-  height: 2px;
+  height: 5px;
   background: linear-gradient(315deg, #ffbc00, #ff0058);
 }
 
 section {
   width: 100%;
   height: 100%;
-  background: rgb(26, 26, 26);
-}/*# sourceMappingURL=main.css.map */
+  background: #000;
+}
+section .landing-page {
+  padding-top: 100px;
+}
+section .landing-page .container {
+  max-width: 1240px;
+}
+section .landing-page .container .main-content {
+  transition: all 0.3s;
+  border-radius: 13px;
+}
+@media (min-width: 768px) {
+  section .landing-page .container .main-content {
+    filter: grayscale(1);
+  }
+}
+section .landing-page .container .main-content .content-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 13px 13px 0 0;
+  background: #d9d9d9;
+}
+section .landing-page .container .main-content .content-top .buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 60px;
+}
+section .landing-page .container .main-content .content-top .buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+section .landing-page .container .main-content .content-top .buttons #close {
+  background: red;
+}
+section .landing-page .container .main-content .content-top .buttons #minimize {
+  background: #ffaa00;
+}
+section .landing-page .container .main-content .content-top .buttons #full {
+  background: #277a00;
+}
+section .landing-page .container .main-content .content-middle {
+  width: 100%;
+  height: 500px;
+  background: #f9f9f9;
+  border-radius: 0 0 13px 13px;
+}
+section .landing-page .container .main-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #d9d9d9;
+}
+@media (min-width: 768px) {
+  section .landing-page .container .main-content:hover {
+    filter: grayscale(0);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

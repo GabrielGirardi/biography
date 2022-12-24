@@ -1,11 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 77%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
+  max-height: 100%;
 }
 
 .container {
@@ -65,6 +86,8 @@ section .landing-page .container {
   max-width: 1240px;
 }
 section .landing-page .container .main-content {
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s;
   border-radius: 13px;
 }
@@ -78,7 +101,6 @@ section .landing-page .container .main-content .content-top {
   align-items: center;
   width: 100%;
   height: 30px;
-  padding: 0 10px;
   border-radius: 13px 13px 0 0;
   background: #d9d9d9;
 }
@@ -87,6 +109,7 @@ section .landing-page .container .main-content .content-top .buttons {
   align-items: center;
   gap: 6px;
   width: 60px;
+  margin-left: 6px;
 }
 section .landing-page .container .main-content .content-top .buttons span {
   width: 12px;
@@ -107,6 +130,57 @@ section .landing-page .container .main-content .content-middle {
   height: 500px;
   background: #f9f9f9;
   border-radius: 0 0 13px 13px;
+  padding: 12px;
+}
+section .landing-page .container .main-content .content-middle .first-content {
+  display: flex;
+  justify-content: center;
+}
+section .landing-page .container .main-content .content-middle .first-content h1 {
+  text-transform: uppercase;
+  font-size: 21px;
+}
+section .landing-page .container .main-content .content-middle .second-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  background: var(--color-base);
+  font-size: 14px;
+  border-radius: 13px;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .text-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: var(--color-base);
+  border-radius: 13px;
+  border: 1px solid #9d9d9d;
+  padding: 6px 12px;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .text-card p {
+  overflow: hidden;
+  border-right: 2px solid var(--dark);
+  letter-spacing: 1px;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  margin: 0;
+}
+section .landing-page .container .main-content .content-middle .second-content img.profile-image {
+  border: 1px solid #000;
+  border-radius: 50%;
 }
 section .landing-page .container .main-content:hover {
   transform: translateY(-10px);

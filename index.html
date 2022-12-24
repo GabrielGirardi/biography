@@ -7,49 +7,72 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./assets/logo/gg.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/functions.js"></script>
     <title>Página Principal</title>
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="container">
-                <div class="header-top-content">
-                    <ul class="header-menu-container">
-                        <li class="header-options" id="main">Página Principal</li>
-                        <li class="header-options" id="about">Sobre Mim</li>
-                        <li class="header-options" id="languages">Linguagens</li>
-                        <li class="header-options" id="projects">Projetos</li>
-                        <li class="header-options" id="social">Social</li>
-                    </ul>
-                    <div class="home">
-                        <img src="./assets/props/home.svg" alt="Retornar a home" width="16" height="16">
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-content">
+                <ul class="header-menu-container">
+                    <li class="header-options" id="main">Página Principal</li>
+                    <li class="header-options" id="about">Sobre Mim</li>
+                    <li class="header-options" id="languages">Linguagens</li>
+                    <li class="header-options" id="projects">Projetos</li>
+                    <li class="header-options" id="social">Social</li>
+                </ul>
+                <div class="home">
+                    <img src="./assets/props/home.svg" alt="Retornar a home" width="16" height="16">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container"></div>
+    </div>
+</header>
+<section>
+    <div class="landing-page">
+        <div class="container">
+            <div class="main-content">
+                <div class="content-top">
+                    <div class="buttons">
+                        <span id="close"></span>
+                        <span id="minimize"></span>
+                        <span id="full"></span>
+                    </div>
+                </div>
+                <div class="content-middle">
+                    <div class="first-content">
+                        <h1>Desenvolvedor Front-End</h1>
+                    </div>
+                    <div class="second-content">
+                        <img
+                                class="profile-image"
+                                src="https://avatars.githubusercontent.com/u/88117217?s=400&u=da9abcbc7e529495decf837b7b8e980bf1ce5ab0&v=4"
+                                alt=""
+                                title=""
+                                width="200"
+                                height="200"
+                        />
+                        <div class="conversation-box">
+                            <h2>GG</h2>
+                            <div class="text-card">
+                                <p>
+                                    Olá <strong>Visitante!</strong> Meu nome é <strong>Gabriel Girardi</strong>. Seja
+                                    Bem-Vindo ao meu site pessoal
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="header-bottom"><div class="container"></div></div>
-    </header>
-    <section>
-        <div class="landing-page">
-            <div class="container">
-                <div class="main-content">
-                    <div class="content-top">
-                        <div class="buttons">
-                            <span id="close"></span>
-                            <span id="minimize"></span>
-                            <span id="full"></span>
-                        </div>
-                    </div>
-                    <div class="content-middle">
-                        <div class="first-content">
-                            <h1>Bem Vindo Visitante</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 </body>
 </html>

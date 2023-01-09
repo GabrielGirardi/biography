@@ -15,6 +15,17 @@
     border-color: orange;
   }
 }
+@keyframes float {
+  0% {
+    padding-bottom: 0;
+  }
+  50% {
+    padding-bottom: 5px;
+  }
+  100% {
+    padding-bottom: 0;
+  }
+}
 * {
   text-decoration: none;
   list-style: none;
@@ -40,9 +51,6 @@ body {
   background: #d9d9d9;
   height: 30px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 10;
 }
 .header-top .header-top-content {
   display: flex;
@@ -52,6 +60,7 @@ body {
 .header-top .header-top-content .header-menu-container {
   display: flex;
   gap: 20px;
+  margin: 0;
 }
 .header-top .header-top-content .header-menu-container .header-options {
   font-size: 14px;
@@ -68,7 +77,6 @@ body {
 }
 
 .header-bottom {
-  margin-top: 30px;
   width: 100%;
   height: 5px;
   background: linear-gradient(315deg, #ffbc00, #ff0058);
@@ -154,7 +162,7 @@ section .landing-page .container .main-content .content-middle .second-content .
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 160px;
   height: 30px;
   background: var(--color-base);
   font-size: 14px;
@@ -177,6 +185,21 @@ section .landing-page .container .main-content .content-middle .second-content .
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   white-space: nowrap;
   margin: 0;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .options-box {
+  display: flex;
+  justify-content: center;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .options-box nav form {
+  gap: 6px;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .third-content {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-base);
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .third-content nav form {
+  gap: 6px;
 }
 section .landing-page .container .main-content .content-middle .second-content img.profile-image {
   border: 1px solid #000;

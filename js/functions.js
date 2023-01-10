@@ -3,12 +3,12 @@ $(document).ready(function () {
 
     $('.op-1').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Bem, atualmente tenho 19 Anos</p>';
+        dialogBox.innerHTML = '<p>Claro, você pode me conhecer melhor acessando o meu portfólio, <a href="./about.html">Clique aqui</a></p>';
     });
 
     $('.op-2').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci obcaecati officiis reiciendis voluptas. Consectetur cum error id ipsum officiis quibusdam repellendus saepe sit tempora tenetur vel velit veniam voluptatem, voluptatum.</p>';
+        dialogBox.innerHTML = '<p><img src="" alt="" width="" height=""/><img src="" alt="" width="" height=""/><img src="" alt="" width="" height=""/><img src="" alt="" width="" height=""/> </p>';
     });
 
     $('.op-3').on('click', function () {

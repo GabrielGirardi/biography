@@ -178,13 +178,18 @@ section .landing-page .container .main-content .content-middle .second-content .
   border: 1px solid #9d9d9d;
   padding: 6px 12px;
 }
-section .landing-page .container .main-content .content-middle .second-content .conversation-box .text-card p {
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .text-card p#dialog {
+  display: none;
   overflow: hidden;
-  border-right: 2px solid var(--dark);
   letter-spacing: 1px;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   white-space: nowrap;
   margin: 0;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .text-card p#typing {
+  margin: 0;
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .text-card p#typing img {
+  border-radius: 50%;
 }
 section .landing-page .container .main-content .content-middle .second-content .conversation-box .options-box {
   display: flex;

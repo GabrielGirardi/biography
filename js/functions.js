@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     $('.op-4').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Contato: <img class="" src="" alt="" width="32" height="32" /></p>';
+        dialogBox.innerHTML = '<p class="social-contact"><a class="social facebook" href="https://www.facebook.com/Biel.gitardi.tmj/" target="_blank"><img src="./assets/social/facebook.png" alt="Facebook" width="32" height="32"/></a><a class="social instagram" href="https://www.instagram.com/gabriell_girardii/" target="_blank"><img src="./assets/social/instagram.png" alt="Instagram" width="32" height="32"/></a><a class="social github" href="https://github.com/GabrielGirardi" target="_blank"><img src="./assets/social/github.png" alt="Github" width="32" height="32"/></a><a class="social linkedin" href="www.linkedin.com/in/ggirardii" target="_blank"><img src="./assets/social/linkedin.png" alt="Linkedin" width="32" height="32"/></a></p>';
         change();
     });
 

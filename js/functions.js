@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     $('.op-1').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Claro! você pode acessar <a class="links" href="./about.html">Aqui</a> e conhecer melhor toda a minha trajetória nessa loucura de desenvolvimento.</p>';
+        dialogBox.innerHTML = '<p>Claro! você pode clicar <a class="links" href="./about.html">Aqui</a> e conhecer melhor toda a minha trajetória nessa vida de desenvolvimento.</p>';
         change();
     });
 
@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     $('.op-5').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Além do grande amor com a tecnologia, sou apaixonado por desenhar, jogar, assistir filmes e ouvir música!</p>';
+        dialogBox.innerHTML = '<p>Além de amar a tecnologia, sou apaixonado por desenhar, jogar games, assistir filmes e ouvir música!</p>';
         change();
     });
 });

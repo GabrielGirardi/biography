@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     $('.op-1').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Incrível! você pode clicar <a class="links" href="./about.html">Aqui</a> e conhecer melhor toda a minha trajetória nessa vida de desenvolvimento.</p>';
+        dialogBox.innerHTML = '<p>Incrível! você pode clicar <a class="links" href="./about.html">Aqui</a> e conhecer melhor toda a minha trajetória nessa vida em "desenvolvimento".</p>';
         change();
     });
 
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     $('.op-3').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Atualmente estou trabalhando como Frontend em uma plataforma de e-commerce incrível chamada <a class="links" href="https://www.magazord.com.br">Magazord</></p>';
+        dialogBox.innerHTML = '<p>Atualmente estou trabalhando como Desenvolvedor Front-end em uma plataforma de e-commerce incrível chamada <a class="links" href="https://www.magazord.com.br">Magazord</></p>';
         change();
     });
 

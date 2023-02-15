@@ -129,11 +129,6 @@ div.lading-page {
         border-radius: 50%;
         width: 22px;
         height: 22px;
-
-        img,
-        svg {
-          filter: invert(1);
-        }
       }
     }
   }
@@ -325,6 +320,10 @@ section {
                       padding: 0;
                     }
                   }
+                }
+                
+                .btn-sm {
+                  text-align: left;
                 }
               }
 

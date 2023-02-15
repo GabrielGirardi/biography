@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     $('.op-1').on('click', function () {
         $(this).attr('disabled', true);
-        dialogBox.innerHTML = '<p>Claro! você pode clicar <a class="links" href="./about.html">Aqui</a> e conhecer melhor toda a minha trajetória nessa vida de desenvolvimento.</p>';
+        dialogBox.innerHTML = '<p>Incrível! você pode clicar <a class="links" href="./about.html">Aqui</a> e conhecer melhor toda a minha trajetória nessa vida de desenvolvimento.</p>';
         change();
     });
 

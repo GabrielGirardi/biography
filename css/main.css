@@ -127,10 +127,6 @@ div.lading-page div.container {
     width: 22px;
     height: 22px;
   }
-  .header-top .header-top-content .home img,
-  .header-top .header-top-content .home svg {
-    filter: invert(1);
-  }
 }
 
 .header-bottom {
@@ -301,6 +297,9 @@ section .landing-page .container .main-content .content-middle .second-content .
   section .landing-page .container .main-content .content-middle .second-content .conversation-box .options-box nav.navbar form.container-fluid {
     padding: 0;
   }
+}
+section .landing-page .container .main-content .content-middle .second-content .conversation-box .options-box .btn-sm {
+  text-align: left;
 }
 section .landing-page .container .main-content .content-middle .second-content .conversation-box .third-content {
   display: flex;

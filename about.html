@@ -1,10 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="shortcut icon" href="./assets/logo/gg.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/about.js"></script>
+    <title>Sobre mim</title>
 </head>
 <body>
-
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <ul class="header-menu-container">
+                        <li class="header-options" id="main">Sobre mim</li>
+                    </ul>
+                    <div class="home">
+                        <img src="./assets/props/icon-user.svg" alt="Retornar a home" width="16" height="16">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container"></div>
+        </div>
+    </header>
+    <section>
+        <a class="flex align-center justify-center" href="./index.html">
+            <div class="btn-back">
+                <div class="btn-back-rounded flex align-center justify-center">   
+                    <img class="icon-back-home" src="./assets/props/icon-house.svg" alt="Voltar para a Home"/>
+                </div>
+            </div>
+        </a>
+        
+        <div class="main-content flex justify-center">        
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                    <li data-target="#myCarousel" data-slide-to="7"></li>
+                </ol>
+            
+                <div class="carousel-inner" role="listbox">
+            
+                    <div class="item active">
+                        <a href="#">
+                            <img src="./assets/fotos/journey.gif" alt="Jornada - Primeira Parte" width="460" height="100">
+                            <div class="carousel-caption">
+                                <h3>Jornada na Programação</h3>
+                                <p>Tudo começou em 2018, quando pela primeira vez eu e alguns amigos tentamos desenvolver um jogo em 2d. Fomos em busca de conhecimento para tentar cumprir esse desafio...</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="#">
+                            <img src="./assets/fotos/journey-2.gif" alt="Jornada - Segunda Parte" width="460" height="100">
+                            <div class="carousel-caption">
+                                <h3>Primeiro Curso de Programação</h3>
+                                <p>Mesmo assistindo algumas aulas pelo youtube, oficialmente meu primeiro Curso de Programação foi no Senac com o professor Weilin em 2021. Foram 6 meses de aprendizado, meu primeiro contato foi com o Java.</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="#">
+                            <img src="./assets/fotos/journey-3.gif" alt="Jornada - Terceira Parte" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Primeiro Projeto</h3>
+                                <p>Meu primeiro projeto foi realizado a partir de um trabalho chamado Projeto Integrador, consistia em desenvolver ao longo do curso algum aplicativo em java para desktop. Com isso, escolhi desenvolver um aplicativo de PDV utilizando Java, SQL e algumas bibliotecas.</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="#">
+                            <img src="./assets/fotos/journey-4.gif" alt="Trabalho como Desenvolvedor Web" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Desenvolvedor Web</h3>
+                                <p>Bom, agora falando sobre como eu me tornei um desenvolvedor front-end... Ao final de 2021 e também do Ensino Médio, eu estava trabalhando como vendedor em uma loja de esportes, tinha finalizado o curso no Senac e queria muito procurar uma vaga na área...</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="#">
+                            <img src="./assets/fotos/journey-5.gif" alt="Trabalho como Desenvolvedor Web" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Desenvolvedor Web II</h3>
+                                <p>Em novembro de 2021 meu sogro acabou achando uma vaga de desenvolvedor em um jornal na qual ele costumava ler, com isso, não perdi tempo e mandei um currículo. A vaga era para um estágio de desenvolvedor Front-end.</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="#">
+                            <img src="./assets/fotos/question.gif" alt="Base de Conhecimento" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Como consegui ter uma base?</h3>
+                                <p>Bom, ainda no final de 2021 participei de um curso na IPM de Desenvolvimento Web... junto com isso, estava tendo aulas pela Hotmart para que desta forma eu tivesse mais chances de conseguir um lugar naquela empresa...</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="www.magazord.com.br">
+                            <img src="./assets/fotos/magazord.jpg" alt="Magazord" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Magazord</h3>
+                                <p>Por fim, depois de tudo... Finalmente consegui o estágio na área em uma empresa incrível chamada Magazord e estou por lá até hoje! Sempre aprendendo coisas novas e tentando ser melhor a cada dia.</p>
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="item">
+                        <a href="#">
+                            <img src="./assets/fotos/thanks.gif" alt="Agradecimentos Especiais" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Agradecimentos</h3>
+                                <p>Obrigado a todo mundo que me ajudou nessa trilha, em especial a minha namorada que nunca deixou de acreditar em mim, a minha equipe, ao meu irmão por todo o suporte e aos meus sogros que ainda leem jornal haha.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
 </body>
 </html>

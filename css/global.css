@@ -27,3 +27,19 @@
     --light: #f8f9fa;
     --dark: #343a40;
 }
+
+.flex {
+    display: flex;   
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.low-transparency {
+    opacity: 0.70;
+}

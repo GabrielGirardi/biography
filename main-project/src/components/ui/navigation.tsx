@@ -1,4 +1,4 @@
-import { CodeIcon, PersonIcon, ImageIcon, LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { CodeIcon, PersonIcon, ImageIcon, LinkedInLogoIcon, MobileIcon } from "@radix-ui/react-icons";
 import Home from "../../assets/icons/home.svg";
 
 function Navigation() {
@@ -36,7 +36,7 @@ function Navigation() {
                 </li>
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full">
                     <a className="flex items-center justify-center w-14 h-14" href="https://github.com/GabrielGirardi">
-                        <GitHubLogoIcon className="contrast-50" width={25} height={25} />
+                        <MobileIcon className="contrast-50" width={25} height={25} />
                     </a>
                 </li>
             </ul>

@@ -17,6 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        "bg-base": "var(--bg-base)",
+        "bg-navigation": "var(--bg-navigation)",
+        "bs-navigation": "var(--bs-navigation)",
+        "bg-selected": "var(--bg-selected)",
+        "border-separator": "var(--border-separator)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -50,6 +55,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      boxShadow: {
+        'nav': '0 6px 9px 0 rgba(0, 0, 0, 0.60), 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.04)',
       },
       borderRadius: {
         lg: "var(--radius)",

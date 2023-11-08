@@ -1,3 +1,5 @@
+import Logo from "./assets/icons/logo.svg";
+import Spline from '@splinetool/react-spline';
 import Navigation from "./components/ui/navigation";
 import NavigationSwiper from "./components/ui/navigationSwiper";
 
@@ -11,11 +13,16 @@ export function App() {
                 <div className="flex flex-col w-1/2 gap-10">
                     <h1 className="text-5xl">Gabriel Girardi</h1>
                     <span className="text-xl">
-                        Welcome to the extraordinary world of Gabriel Girardi, a versatile and imaginative artist who skillfully navigates the realms of product development, design and digital art. With a keen eye for detail and a relentless pursuit of innovation, Gabriel Girardi crafts captivating visual narratives, immersive digital realms, and functional yet aesthetically pleasing products.
+                    	Bem vindo ao meu portfólio, aqui você pode encontrar mais sobre meus projetos, minhas habilidades como desenvolvedor, algumas curidosidades e claro, minhas redes sociais e meios de contato para poder se comunicar comigo. Boa navegação!
                     </span>
                 </div>
-                <div className="w-1/3 h-80 rounded-lg bg-white">
-                    
+                <div className="flex items-center justify-center w-1/3 h-80">
+                    {/*<Spline scene="https://prod.spline.design/uBdDsjImahAlXpHC/scene.splinecode"/>*/}
+
+
+                    {/*<a className="flex items-center justify-center w-72 h-72 p-2 bg-gradient-to-r" href="https://app.daily.dev/devggirardi" target="_blank">*/}
+                    {/*	<img className="w-full h-full object-contain animate-pulse" src={Logo} alt={'Dev Card'}/>*/}
+            	    {/*</a>*/}
                 </div>
             </div>
 

@@ -3,7 +3,7 @@ import Home from "../../assets/icons/home.svg";
 
 function Navigation() {
     return (
-        <div className="flex md:hidden">
+        <div className="flex">
             <ul className="flex flex-col items-center justify-center p-1 gap-1 w-16 bg-bg-navigation rounded-full border shadow-nav backdrop-blur-lg">
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full bg-bg-selected :before">
                     <a className="flex items-center justify-center relative w-14 h-14" href="#"> 

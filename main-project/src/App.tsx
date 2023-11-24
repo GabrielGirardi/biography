@@ -1,3 +1,5 @@
+import Logo from "./assets/icons/logo.svg";
+import Spline from '@splinetool/react-spline';
 import Navigation from "./components/ui/navigation";
 import NavigationSwiper from "./components/ui/navigationSwiper";
 import Banner from "./assets/images/banner-profile.jpg";

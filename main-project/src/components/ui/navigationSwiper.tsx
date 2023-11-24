@@ -5,7 +5,6 @@ import 'swiper/css';
 function NavigationSwiper() {
     return (
         <Swiper className="p-2" spaceBetween={20} slidesPerView={2.5}>
-
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
                 <a href="">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-purple-500 to-blue-500 w-auto text-center rounded-lg p-4">

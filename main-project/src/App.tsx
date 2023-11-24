@@ -1,5 +1,6 @@
 import Navigation from "./components/ui/navigation";
 import NavigationSwiper from "./components/ui/navigationSwiper";
+import Banner from "./assets/images/banner-profile.jpg";
 
 export function App() {
     return (
@@ -11,11 +12,11 @@ export function App() {
                 <div className="flex flex-col w-1/2 gap-10">
                     <h1 className="text-5xl">Gabriel Girardi</h1>
                     <span className="text-xl">
-                        Welcome to the extraordinary world of Gabriel Girardi, a versatile and imaginative artist who skillfully navigates the realms of product development, design and digital art. With a keen eye for detail and a relentless pursuit of innovation, Gabriel Girardi crafts captivating visual narratives, immersive digital realms, and functional yet aesthetically pleasing products.
+                    Seja bem-vindo ao meu portfólio, uma forma versátil e imaginativa que oferece uma visão mais aprofundada da minha jornada como desenvolvedor na área de tecnologia. Sinta-se à vontade para explorar alguns dos projetos destacados, conhecer mais sobre minha história na seção "Sobre Mim" e, caso haja interesse, encontrar maneiras de entrar em contato comigo. Espero que desfrute da experiência e encontre insights valiosos sobre meu percurso e habilidades.
                     </span>
                 </div>
-                <div className="w-1/3 h-80 rounded-lg bg-white">
-                    
+                <div className="w-1/3 h-80 rounded-lg bg-white overflow-hidden">
+                    <img className="w-full h-full" src={Banner} alt="banner perfil"/>
                 </div>
             </div>
 

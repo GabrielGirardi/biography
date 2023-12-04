@@ -39,6 +39,19 @@
     .dark {
 
     }
+
+    .gradient-text {
+        background: -webkit-linear-gradient(to left, #5079F6, #A755F7);
+        background: linear-gradient(to left, #5079F6, #A755F7);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .radial {
+        background: linear-gradient(to left, #15161A 0%, #22242A 30%, #15161A 90%, #15161A 100%);
+    }
 }
 
 @layer base {

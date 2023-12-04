@@ -3,8 +3,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 function NavigationSwiper() {
+    let slides;
+
+    if (window.innerWidth < 768) {
+        slides = 1.1;
+    } else {
+        slides = 2.5;
+    }
+
+
     return (
-        <Swiper className="p-2" spaceBetween={20} slidesPerView={2.5}>
+        <Swiper className="p-2" spaceBetween={20} slidesPerView={slides} scrollbar={{ draggable: true }} navigation>
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
                 <a href="">
@@ -13,7 +22,7 @@ function NavigationSwiper() {
                         <span className="text-sm text-gray-300">Minha biblioteca de projetos desenvolvidos</span>
                     </div>
                     <div className="flex items-center h-20 ml-4 gap-6">      
-                        <CodeIcon width={24} height={24} />
+                        <CodeIcon width={24} height={24}/>
                         <span className="flex flex-col justify-center gap-1">
                             <h3 className="text-base">
                                 Projetos

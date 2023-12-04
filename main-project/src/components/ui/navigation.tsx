@@ -3,8 +3,8 @@ import Home from "../../assets/icons/home.svg";
 
 function Navigation() {
     return (
-        <div className="flex">
-            <ul className="flex flex-col items-center justify-center p-1 gap-1 w-16 bg-bg-navigation rounded-full border shadow-nav backdrop-blur-lg">
+        <div className="flex w-full lg:w-full">
+            <ul className="flex flex-row items-center justify-start p-1 gap-1 w-full bg-bg-navigation rounded-full border shadow-nav backdrop-blur-lg lg:justify-center lg:flex-col lg:w-16">
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full bg-bg-selected :before">
                     <a className="flex items-center justify-center relative w-14 h-14" href="#"> 
                         <img src={Home} alt="home" width={25} height={25}/>
@@ -27,7 +27,7 @@ function Navigation() {
                     </a>
                 </li>
 
-                <span className="bg-border-separator w-8 h-0.5 rounded-full"></span>
+                <span className="bg-border-separator w-8 h-0.5 rounded-full hidden lg:block"></span>
 
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full">
                     <a className="flex items-center justify-center w-14 h-14" href="https://www.linkedin.com/in/ggirardii">

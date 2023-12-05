@@ -1,8 +1,6 @@
-import { CodeIcon, PersonIcon, ImageIcon, MobileIcon } from "@radix-ui/react-icons";
+import { PersonIcon, SunIcon, PlayIcon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
 
 function NavigationSwiper() {
     let slides;
@@ -14,32 +12,22 @@ function NavigationSwiper() {
     }
 
 
-    const showSwal = () => {
-        withReactContent(Swal).fire({
-          title: <i>Função em desenvolvimento...</i>,
-            text: "Em breve vai estar disponível para uso",
-            icon: "warning",
-        })
-      }
-
-
     return (
         <Swiper className="p-2" spaceBetween={20} slidesPerView={slides} scrollbar={{ draggable: true }} navigation>
-
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
-                <a href="#" onClick={showSwal}>
+                <a href="https://restaurant-system-one.vercel.app/" target="_blank">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-purple-500 to-blue-500 w-auto text-center rounded-lg p-4">
-                        <p className="text-4xl font-bold">Projetos</p>
-                        <span className="text-sm text-gray-300">Minha biblioteca de projetos desenvolvidos</span>
+                        <p className="text-4xl font-bold">Sistema de restaurante</p>
+                        <span className="text-sm text-gray-300">Sistema de reservas de mesas no Ahoy</span>
                     </div>
                     <div className="flex items-center h-20 ml-4 gap-6">      
-                        <CodeIcon width={24} height={24}/>
+                        <HamburgerMenuIcon width={24} height={24}/>
                         <span className="flex flex-col justify-center gap-1">
                             <h3 className="text-base">
-                                Projetos
+                                Sistema de restaurante
                             </h3>
                             <p className="text-xs text-gray-400">
-                                Aqui você encontra todos os meus projetos desenvolvidos ao longo da minha carreira.
+                                Um sistema de reservas de mesas em Vue.js
                             </p>
                         </span>
                     </div>
@@ -47,19 +35,19 @@ function NavigationSwiper() {
             </SwiperSlide>
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
-                <a href="#" onClick={showSwal}>
+                <a href="https://weather-forecast-gg.vercel.app/" target="_blank">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-sky-500 to-indigo-500 w-auto text-center rounded-lg p-4">
-                        <p className="text-4xl font-bold">Sobre mim</p>
-                        <span className="text-sm text-gray-300">Saiba mais sobre mim e a minha jornada no desenvolvimento</span>
+                        <p className="text-4xl font-bold">Previsão do tempo</p>
+                        <span className="text-sm text-gray-300">Saiba mais sobre a previsão temporal</span>
                     </div>
                     <div className="flex items-center h-20 ml-4 gap-6">   
-                        <PersonIcon width={24} height={24} />     
+                        <SunIcon width={24} height={24} />     
                         <span className="flex flex-col justify-center gap-1">
                             <h3 className="text-base">
-                                Sobre mim
+                                Previsão do tempo
                             </h3>
                             <p className="text-xs text-gray-400">
-                                Aqui você encontra um pouco da minha trajetória na vida como desenvolvedor.
+                                Um sistema para saber a previsão temporal de qualquer cidade.
                             </p>
                         </span>
                     </div>
@@ -67,19 +55,19 @@ function NavigationSwiper() {
             </SwiperSlide>
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
-                <a href="#" onClick={showSwal}>
+                <a href="https://github.com/GabrielGirardi/credit-system" target="_blank">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-violet-500 to-fuchsia-500 w-auto text-center rounded-lg p-4">
-                        <p className="text-4xl font-bold">Galeria</p>
-                        <span className="text-sm text-gray-300">Veja o que eu tenho estudado até agora</span>
+                        <p className="text-4xl font-bold">Crediário</p>
+                        <span className="text-sm text-gray-300">Sistema desenvolvido para armazenamento de informações</span>
                     </div>
                     <div className="flex items-center h-20 ml-4 gap-6">
-                        <ImageIcon width={24} height={24}/>        
+                        <PersonIcon width={24} height={24}/>        
                         <span className="flex flex-col justify-center gap-1">
                             <h3 className="text-base">
-                                Galeria
+                                Sistema de crediário
                             </h3>
                             <p className="text-xs text-gray-400">
-                                Aqui você encontra alguns certificados obtidos durante os meus estudos.
+                                Um sistema feito em PHP para cadastro de informações.
                             </p>
                         </span>
                     </div>
@@ -87,19 +75,19 @@ function NavigationSwiper() {
             </SwiperSlide>
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
-                <a href="#" onClick={showSwal}>
+                <a href="https://github.com/GabrielGirardi/nlw-IA" target="_blank">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-pink-500 to-yellow-500 w-auto text-center rounded-lg p-4">
-                        <p className="text-4xl font-bold">Contato</p>
-                        <span className="text-sm text-gray-300">Entre em contato comigo por aqui</span>
+                        <p className="text-4xl font-bold">NLW IA</p>
+                        <span className="text-sm text-gray-300">Projeto utilizando IA</span>
                     </div>
                     <div className="flex items-center h-20 ml-4 gap-6">
-                        <MobileIcon width={24} height={24} />        
+                        <PlayIcon width={24} height={24} />        
                         <span className="flex flex-col justify-center gap-1">
                             <h3 className="text-base">
-                                Contato
+                                NLW IA
                             </h3>
                             <p className="text-xs text-gray-400">
-                                Aqui você encontra meios de contato para se comunicar comigo.
+                                Projeto para produzir descrições/títulos para vídeos.
                             </p>
                         </span>
                     </div>

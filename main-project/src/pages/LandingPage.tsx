@@ -1,4 +1,3 @@
-// import Navigation from "../components/ui/navigation";
 import NavigationSwiper from "../components/ui/navigationSwiper";
 import Banner from "../assets/images/banner-profile.jpg";
 
@@ -24,7 +23,7 @@ function Home() {
                 <h2 className="text-4xl mt-4 lg:mt-0">Navegação</h2>
 
                 <nav className="flex flex-row gap-10 mt-10 w-full">
-                    <NavigationSwiper />
+                    <NavigationSwiper/>
                 </nav>
             </div>
         </>

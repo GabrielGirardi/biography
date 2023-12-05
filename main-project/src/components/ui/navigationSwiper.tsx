@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import $ from 'jquery';
+import { useEffect } from 'react'; 
 
 function NavigationSwiper() {
     let slides;
@@ -20,8 +22,21 @@ function NavigationSwiper() {
             text: "Em breve vai estar disponível para uso",
             icon: "warning",
         })
-      }
+    }
 
+    useEffect(() => {
+        // Adiciona um ouvinte de evento de clique ao elemento com a classe 'projects-card'
+        $('.projects-card').on('click', function () {
+            $('.projects').trigger('click');
+        });
+
+        return () => {
+            $('.projects-card').off('click');
+        };
+    }, []); 
+
+
+      
 
     return (
         <Swiper className="p-2" spaceBetween={20} slidesPerView={slides} scrollbar={{ draggable: true }} navigation>

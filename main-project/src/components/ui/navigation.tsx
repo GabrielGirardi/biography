@@ -23,13 +23,13 @@ const Navigation: React.FC<{ paginaAtiva: string; onMenuClick: (pagina: string) 
     return (
         <div className="flex w-full lg:w-full">
             <ul className="flex flex-row items-center justify-start p-1 gap-1 w-full bg-bg-navigation rounded-full border shadow-nav backdrop-blur-lg lg:justify-center lg:flex-col lg:w-16">
-                <li className={'flex items-center justify-center w-14 h-14 overflow-hidden rounded-full :before ' + `${paginaAtiva === 'home' ? 'bg-bg-selected' : ''}`} onClick={() => changePage('home')}>
+                <li className={'home flex items-center justify-center w-14 h-14 overflow-hidden rounded-full :before ' + `${paginaAtiva === 'home' ? 'bg-bg-selected' : ''}`} onClick={() => changePage('home')}>
                     <a className="flex items-center justify-center relative w-14 h-14" href="#"> 
                         <img src={Home} alt="home" width={25} height={25}/>
                         <span className={'absolute bottom-0 contrast-50 ' + `${paginaAtiva === 'home' ? 'flex' : 'hidden'}`}>.</span>
                     </a>
                 </li>
-                <li className={'flex items-center justify-center w-14 h-14 overflow-hidden rounded-full ' + `${paginaAtiva === 'projects' ? 'bg-bg-selected' : ''}`} onClick={() => changePage('projects')}>
+                <li className={'projects flex items-center justify-center w-14 h-14 overflow-hidden rounded-full ' + `${paginaAtiva === 'projects' ? 'bg-bg-selected' : ''}`} onClick={() => changePage('projects')}>
                     <a className="flex items-center justify-center relative w-14 h-14" href="#">
                         <CodeIcon className="contrast-50" width={25} height={25} />
                         <span className={'absolute bottom-0 contrast-50 ' + `${paginaAtiva === 'projects' ? 'flex' : 'hidden'}`}>.</span>

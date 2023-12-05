@@ -27,7 +27,7 @@ function NavigationSwiper() {
         <Swiper className="p-2" spaceBetween={20} slidesPerView={slides} scrollbar={{ draggable: true }} navigation>
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
-                <a href="#" onClick={showSwal}>
+                <a className="projects-card" href="#">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-purple-500 to-blue-500 w-auto text-center rounded-lg p-4">
                         <p className="text-4xl font-bold">Projetos</p>
                         <span className="text-sm text-gray-300">Minha biblioteca de projetos desenvolvidos</span>

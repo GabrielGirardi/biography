@@ -8,7 +8,7 @@ function Projects() {
                         <b><span className="gradient-text">GABRIEL GIRARDI</span></b>
                     </h1>
                     <span className="text-xl mt-10">
-                        Sou um entusiasta da programação, apaixonado pelo desenvolvimento de software há cerca de três anos. Minha jornada começou aos 14 anos, quando a curiosidade sobre a criação de sites e jogos despertou em mim uma busca constante por conhecimento.
+                        Sou um entusiasta da programação, apaixonado pelo desenvolvimento de software. Minha jornada começou aos 14 anos, quando a curiosidade sobre a criação de sites e jogos despertou em mim uma busca constante por conhecimento.
 
                         Iniciei minha trajetória estudando a criação de plugins em Java para jogos, marcando meu primeiro contato significativo com a programação. Essa paixão evoluiu ao longo dos anos, e aos 18 anos, dei meus primeiros passos no desenvolvimento web, uma área que se tornou meu verdadeiro campo de interesse.
 

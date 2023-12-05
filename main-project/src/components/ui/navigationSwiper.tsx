@@ -111,7 +111,7 @@ function NavigationSwiper() {
             </SwiperSlide>
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
-                <a href="#" onClick={showSwal}>
+                <a href="https://wa.me/5547997135921?text=Ol%C3%A1,%20vamos%20marcar%20uma%20conversa?%20" target="_blank">
                     <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-pink-500 to-yellow-500 w-auto text-center rounded-lg p-4">
                         <p className="text-4xl font-bold">Contato</p>
                         <span className="text-sm text-gray-300">Entre em contato comigo por aqui</span>
@@ -123,7 +123,7 @@ function NavigationSwiper() {
                                 Contato
                             </h3>
                             <p className="text-xs text-gray-400">
-                                Aqui você encontra meios de contato para se comunicar comigo.
+                                Aqui você pode me mandar uma mensagem.
                             </p>
                         </span>
                     </div>

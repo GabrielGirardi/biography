@@ -6,7 +6,7 @@ export function App() {
     return (
         <section className="min-h-screen flex flex-col p-4 lg:p-10">
             <div className="flex items-center gap-20 radial flex-col lg:flex-row">
-                <nav className="flex items-center w-full lg:w-20">
+                <nav className="flex items-center w-full md:w-1/2 lg:w-20">
                     <Navigation/>
                 </nav>
                 <div className="flex flex-col w-full text-center lg:text-left lg:w-1/2">

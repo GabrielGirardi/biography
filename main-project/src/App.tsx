@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import HomePage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
+import About from "./pages/About";
 import Navigation from "./components/ui/navigation";
-
 export function App() {
     const [paginaAtiva, setPaginaAtiva] = useState('home');
 
@@ -18,6 +18,7 @@ export function App() {
 
             {paginaAtiva === 'home' && <HomePage />}
             {paginaAtiva === 'projects' && <Projects />}
+            {paginaAtiva === 'about' && <About />}
         </section>
     )
 }

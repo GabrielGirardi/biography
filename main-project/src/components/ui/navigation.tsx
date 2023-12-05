@@ -35,7 +35,7 @@ const Navigation: React.FC<{ paginaAtiva: string; onMenuClick: (pagina: string) 
                         <span className={'absolute bottom-0 contrast-50 ' + `${paginaAtiva === 'projects' ? 'flex' : 'hidden'}`}>.</span>
                     </a>
                 </li>
-                <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full" onClick={showSwal}>
+                <li className={'about flex items-center justify-center w-14 h-14 overflow-hidden rounded-full ' + `${paginaAtiva === 'about' ? 'bg-bg-selected' : ''}`} onClick={() => changePage('about')}>
                     <a className="flex items-center justify-center relative w-14 h-14" href="#">
                         <PersonIcon className="contrast-50" width={25} height={25} />
                         <span className={'absolute bottom-0 contrast-50 ' + `${paginaAtiva === 'about' ? 'flex' : 'hidden'}`}>.</span>
@@ -56,7 +56,7 @@ const Navigation: React.FC<{ paginaAtiva: string; onMenuClick: (pagina: string) 
                     </a>
                 </li>
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full">
-                    <a className="flex items-center justify-center w-14 h-14" href="https://github.com/GabrielGirardi">
+                    <a className="flex items-center justify-center w-14 h-14" href="tel:+5547997135921">
                         <MobileIcon className="contrast-50" width={25} height={25} />
                     </a>
                 </li>

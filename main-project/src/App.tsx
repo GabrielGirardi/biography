@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Home from "./pages/home";
+import { useState } from 'react';
+import HomePage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
 import Navigation from "./components/ui/navigation";
 
@@ -16,7 +16,7 @@ export function App() {
                 <Navigation paginaAtiva={paginaAtiva} onMenuClick={handleMenuClick}/>
             </nav>
 
-            {paginaAtiva === 'home' && <Home />}
+            {paginaAtiva === 'home' && <HomePage />}
             {paginaAtiva === 'projects' && <Projects />}
         </section>
     )

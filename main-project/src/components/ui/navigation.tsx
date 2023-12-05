@@ -1,13 +1,12 @@
 import { CodeIcon, PersonIcon, ImageIcon, LinkedInLogoIcon, MobileIcon } from "@radix-ui/react-icons";
 import Home from "../../assets/icons/home.svg";
-import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 
-function Navigation({ paginaAtiva, onMenuClick}) {
+const Navigation: React.FC<{ paginaAtiva: string; onMenuClick: (pagina: string) => void }> = ({ paginaAtiva, onMenuClick }) => {
     const changePage = (pagina: string) => {
-        // Atualiza a página ativa
+  
         onMenuClick(pagina);
     };
 

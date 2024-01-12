@@ -10,7 +10,7 @@ function Projects() {
                     <span className="text-xl mt-10 flex flex-col gap-3 lg:max-w-7xl">
                         <p>Sou um entusiasta da programação, apaixonado pelo desenvolvimento de software. Minha jornada começou aos meus 14 anos de idade, quando a curiosidade sobre a criação de sites e jogos despertou em mim uma busca constante por conhecimento.</p>
                         <p>Iniciei meus estudos na criação de plugins em Java para jogos, marcando oficialmente o primeiro contato significativo com a programação. Essa paixão não demorou muito para evoluir, e aos meus 18 anos dei meus primeiro passo no desenvolvimento web, que se tornou meu foco de estudo até hoje.</p>
-                        <p>Atualmente, atuo como desenvolvedor frontend, dedicando-me a aprimorar a experiência do usuário por meio de interfaces elegantes. No entanto, minha busca por conhecimento não para por aí; estou empenhado em me tornar um desenvolvedor full stack, pois tenho um profundo apreço por transformar conceitos em realidade e tornar as coisas não apenas visíveis, mas também funcionais.</p>
+                        <p>Atualmente, atuo como desenvolvedor frontend, dedicando-me a aprimorar a experiência do usuário por meio de interfaces elegantes. No entanto, minha busca por conhecimento não para por aí! estou empenhado em me tornar um desenvolvedor full stack, pois tenho um profundo apreço por transformar conceitos em realidade e tornar as coisas não apenas visíveis, mas também funcionais.</p>
                     </span>
                 </div>
             </div>

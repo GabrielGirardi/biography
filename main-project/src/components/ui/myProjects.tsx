@@ -16,7 +16,7 @@ function NavigationSwiper() {
         <Swiper className="p-2" spaceBetween={20} slidesPerView={slides} scrollbar={{ draggable: true }} navigation>
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
                 <a href="https://restaurant-system-one.vercel.app/" target="_blank">
-                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-purple-500 to-blue-500 w-auto text-center rounded-lg p-4">
+                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-gray-500 to-yellow-800 w-auto text-center rounded-lg p-4">
                         <p className="text-4xl font-bold">Sistema de restaurante</p>
                         <span className="text-sm text-gray-300">Sistema de reservas de mesas no Ahoy</span>
                     </div>
@@ -36,9 +36,9 @@ function NavigationSwiper() {
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
                 <a href="https://weather-forecast-gg.vercel.app/" target="_blank">
-                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-sky-500 to-indigo-500 w-auto text-center rounded-lg p-4">
+                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-gray-500 to-sky-800 w-auto text-center rounded-lg p-4">
                         <p className="text-4xl font-bold">Previsão do tempo</p>
-                        <span className="text-sm text-gray-300">Saiba mais sobre a previsão temporal</span>
+                        <span className="text-sm text-gray-300">Saiba mais sobre o clima</span>
                     </div>
                     <div className="flex items-center h-20 ml-4 gap-6">   
                         <SunIcon width={24} height={24} />     
@@ -47,7 +47,7 @@ function NavigationSwiper() {
                                 Previsão do tempo
                             </h3>
                             <p className="text-xs text-gray-400">
-                                Um sistema para saber a previsão temporal de qualquer cidade.
+                                Um sistema para saber o clima atual de qualquer cidade.
                             </p>
                         </span>
                     </div>
@@ -56,7 +56,7 @@ function NavigationSwiper() {
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
                 <a href="https://github.com/GabrielGirardi/credit-system" target="_blank">
-                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-violet-500 to-fuchsia-500 w-auto text-center rounded-lg p-4">
+                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-gray-500 to-fuchsia-800 w-auto text-center rounded-lg p-4">
                         <p className="text-4xl font-bold">Crediário</p>
                         <span className="text-sm text-gray-300">Sistema desenvolvido para armazenamento de informações</span>
                     </div>
@@ -76,7 +76,7 @@ function NavigationSwiper() {
 
             <SwiperSlide className="w-1/2 h-96 rounded-lg bg-bg-navigation border shadow-nav backdrop-blur-lg p-2 ease-in duration-150 hover:-translate-y-2">
                 <a href="https://github.com/GabrielGirardi/nlw-IA" target="_blank">
-                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-pink-500 to-yellow-500 w-auto text-center rounded-lg p-4">
+                    <div className="flex flex-col items-center justify-center h-4/5 bg-gradient-to-r from-gray-500 to-orange-800 w-auto text-center rounded-lg p-4">
                         <p className="text-4xl font-bold">NLW IA</p>
                         <span className="text-sm text-gray-300">Projeto utilizando IA</span>
                     </div>

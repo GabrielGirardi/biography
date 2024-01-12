@@ -12,8 +12,8 @@ const Navigation: React.FC<{ paginaAtiva: string; onMenuClick: (pagina: string) 
 
     const showSwal = () => {
         withReactContent(Swal).fire({
-          title: <i>Função em desenvolvimento...</i>,
-            text: "Em breve vai estar disponível para uso",
+          title: <i>Oooooops!</i>,
+            text: "Função em desenvolvimento...",
             icon: "warning",
         })
       }
@@ -51,12 +51,12 @@ const Navigation: React.FC<{ paginaAtiva: string; onMenuClick: (pagina: string) 
                 <span className="bg-border-separator w-8 h-0.5 rounded-full hidden lg:block"></span>
 
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full">
-                    <a className="flex items-center justify-center w-14 h-14" href="https://www.linkedin.com/in/ggirardii">
+                    <a className="flex items-center justify-center w-14 h-14" target="_blank" href="https://www.linkedin.com/in/ggirardii">
                         <LinkedInLogoIcon className="contrast-50" width={25} height={25} />
                     </a>
                 </li>
                 <li className="flex items-center justify-center w-14 h-14 overflow-hidden rounded-full">
-                    <a className="flex items-center justify-center w-14 h-14" href="tel:+5547997135921">
+                    <a className="flex items-center justify-center w-14 h-14" target="_blank" href="https://wa.link/ytox44">
                         <MobileIcon className="contrast-50" width={25} height={25} />
                     </a>
                 </li>

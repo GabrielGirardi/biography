@@ -101,7 +101,7 @@ export default function App() {
                                      <Button variant="outline" size="sm" onClick={toggleLanguage} className="ml-4">
                                         {language === 'pt' ? 'PT 🇧🇷' : 'EN 🇺🇲'}
                                     </Button>
-                                    <Menu language={language} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} toggleLanguage={toggleLanguage} />
+                                    <Menu language={language} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
                                 </span>
                             )}
                         </div>

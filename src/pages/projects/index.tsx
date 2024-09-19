@@ -1,4 +1,4 @@
-import MyProjects from "@/components/ui/myProjects";
+import ProjectsBoard from "./components/projects";
 
 function Projects() {
     return (
@@ -9,15 +9,11 @@ function Projects() {
                     <h1 className="text-6xl lg:text-5xl">
                         <b><span className="gradient-text">PROJETOS</span></b>
                     </h1>
-                    <span className="text-xl mt-10">
-                        Aqui compartilho alguns dos projetos que elaborei, destacando minhas habilidades e proporcionando insights sobre meu trabalho.
-                    </span>
                 </div>
             </div>
-            <div className="flex flex-col mt-16 border-t lg:ml-40 lg:border-t-0 opening">
-                <h2 className="text-4xl mt-4 lg:mt-0">Projetos</h2>
+            <div className="flex flex-col mt-4 border-t lg:ml-40 lg:border-t-0 opening">
                 <nav className="flex flex-row gap-10 mt-10 w-full">
-                    <MyProjects />
+                    <ProjectsBoard />
                 </nav>
             </div>
         </>

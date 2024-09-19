@@ -101,3 +101,15 @@
         opacity: 1;
     }
 }
+
+body {
+    cursor: url(https://img.icons8.com/?size=24&id=gKFt9iFv39hT&format=png&color=000000), auto;
+}
+
+p, h1, h2, h3, h4, .mouse-text {
+    cursor: url(https://img.icons8.com/?size=24&id=nyC0jprfzYZP&format=png&color=000000), text;
+}
+
+a, button, link, .mouse-pointer {
+    cursor: url(https://img.icons8.com/?size=24&id=41761&format=png&color=000000), pointer;
+}

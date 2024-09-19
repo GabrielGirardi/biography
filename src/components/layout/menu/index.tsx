@@ -12,20 +12,17 @@ import {
 } from "@radix-ui/react-icons";
 
 interface MenuProps {
-    language: 'pt' | 'en';
-    setLanguage: (lang: 'pt' | 'en') => void;
+    language: string
+    toggleLanguage: () => void;
 }
 
 function Navigation ({
-    language,
-    setLanguage
+     language,
+     toggleLanguage
 }: MenuProps) {
     const [page, setPage] = useState(window.location.pathname);
     const location = useLocation();
 
-    const toggleLanguage = () => {
-        setLanguage(language === 'pt' ? 'en' : 'pt')
-    }
 
     useEffect(() => {
         const handleNavLink = () => {

@@ -1,4 +1,4 @@
-import NavigationSwiper from "@/components/ui/navigationSwiper";
+import NavigationSwiper from "./components/navigationSwiper";
 import Banner from "@/assets/images/banner-profile.png";
 import { Button } from "./components/button";
 import { Link } from "react-router-dom";
@@ -12,15 +12,15 @@ function LandingPage() {
                     <h1 className="text-6xl lg:text-5xl">
                         <b>Desenvolvedor <span className="gradient-text">Full-Stack</span></b>
                     </h1>
-                    <span className="text-xl mt-2">
+                    <span className="text-xl mt-2 mouse-text">
                         Sou apaixonado por criar soluções web inovadoras e eficientes. Tenho um profundo apreço por transformar conceitos em realidade, tornando-os não apenas visíveis, mas também altamente funcionais.
                     </span>
                     <div className="flex items-center gap-4 w-full mt-16 text-lg justify-center lg:justify-start">
                         <a href="https://wa.link/ytox44" target="_blank">
                             <Button/>
                         </a>
-                        <Link to="/about" title="Sobre mim">
-                            <button className="overflow-hidden w-32 p-2 h-14 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer relative z-10 group">
+                        <Link to="/about" title="Sobre mim" className="mouse-pointer">
+                            <button className="overflow-hidden w-32 p-2 h-14 bg-black text-white border-none rounded-md text-sm font-bold relative z-10 group">
                                 Leia +
                                 <span className="absolute w-36 h-32 -top-8 -left-2 bg-blue-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"></span>
                                 <span className="absolute w-36 h-32 -top-8 -left-2 bg-blue-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"></span>
@@ -34,12 +34,8 @@ function LandingPage() {
                     <img className="w-full h-full object-contain" src={Banner} alt="banner perfil" draggable="false"/>
                 </div>
             </div>
-            <div
-                className="flex flex-col mt-16 border-t lg:ml-40 lg:border-t-0 opening animate__fadeInLeftBig duration-1000">
-                <h2 className="text-4xl mt-4 lg:mt-0 font-bold gradient-text-2">Navegação</h2>
-                <nav className="flex flex-row gap-10 mt-10 w-full">
-                    <NavigationSwiper/>
-                </nav>
+            <div className="flex flex-col mt-16 border-t lg:ml-40 lg:border-t-0 opening animate__fadeInRightBig duration-1000">
+                <NavigationSwiper/>
             </div>
         </>
     )

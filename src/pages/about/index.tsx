@@ -19,13 +19,17 @@ import {
     FaFigma,
 } from 'react-icons/fa';
 
-interface AboutProps {
-    language: 'pt' | 'en'
+interface SkillProps {
+    title: string;
+    bio: string;
+    skills: string;
+    skillList: string[];
+    icon: any;
+    name: string;
 }
 
-
-function About({ language }: AboutProps) {
-    language = 'pt';
+function About() {
+    const language = localStorage.getItem('language') as string || 'pt';
 
     const content = {
         pt: {
@@ -88,6 +92,8 @@ function About({ language }: AboutProps) {
         }
     }
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     const { skills, skillsList } = content[language]
 
     return (
@@ -108,7 +114,7 @@ function About({ language }: AboutProps) {
             <div className="gap-20 ml-0 flex-col lg:flex-row lg:ml-40 mt-10 lg:max-w-7xl animate__fadeIn duration-1000">
                 <h2 className="text-2xl font-semibold text-gray-200 my-5">{skills}</h2>
                 <div className="flex flex-wrap gap-4">
-                    { skillsList.map((skill, index) => (
+                    { skillsList.map((skill: SkillProps, index: number) => (
                         <motion.div
                             key={index}
                             initial={{opacity: 0, x: -20}}

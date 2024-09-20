@@ -25,12 +25,16 @@ function NavigationSwiper() {
                     <>
                         <button
                             className="swiper-button-prev z-10 absolute left-48 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 rounded-full p-2 shadow-md hover:bg-gray-200"
+                            /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+                            /* @ts-ignore */
                             onClick={() => swiperRef.current?.slidePrev()}
                         >
                             <ArrowLeftIcon/>
                         </button>
                         <button
                             className="swiper-button-next z-10 absolute left-60 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 rounded-full p-2 shadow-md hover:bg-gray-200"
+                            /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+                            /* @ts-ignore */
                             onClick={() => swiperRef.current?.slideNext()}
                         >
                             <ArrowRightIcon/>
@@ -49,6 +53,8 @@ function NavigationSwiper() {
                         prevEl: '.swiper-button-prev'
                     }}
                     onInit={(swiper) => {
+                        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                        {/* @ts-ignore */}
                         swiperRef.current = swiper;
                     }}
                 >

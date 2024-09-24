@@ -12,7 +12,13 @@ import {
     ArrowLeftIcon
 } from "@radix-ui/react-icons";
 
-function NavigationSwiper() {
+interface NavigationSwiperProps {
+    navigation: string;
+}
+
+function NavigationSwiper({
+    navigation
+}: NavigationSwiperProps) {
     const swiperRef = useRef(null);
     const slidesPerView = window.innerWidth < 768 ? 1.1 : 2.5;
     const isMobile = window.innerWidth < 768 ? true : false;
@@ -20,11 +26,11 @@ function NavigationSwiper() {
     return (
         <>
             <span className="flex relative mt-4 xl:mt-0">
-                <h2 className="text-4xl lg:mt-0 font-bold gradient-text-2">Navegação</h2>
-                { !isMobile && (
-                    <>
+                <div class="flex align-center items-center">
+                    <div className="flex items-center justify-center h-full gap-4">
+                        <h2 className="text-4xl mt-0 font-bold gradient-text-2">{navigation}</h2>
                         <button
-                            className="swiper-button-prev z-10 absolute left-48 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 rounded-full p-2 shadow-md hover:bg-gray-200"
+                            className="swiper-button-prev z-10 bg-black text-white rounded-full p-2 shadow-md hover:opacity-80"
                             /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
                             /* @ts-ignore */
                             onClick={() => swiperRef.current?.slidePrev()}
@@ -32,15 +38,15 @@ function NavigationSwiper() {
                             <ArrowLeftIcon/>
                         </button>
                         <button
-                            className="swiper-button-next z-10 absolute left-60 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 rounded-full p-2 shadow-md hover:bg-gray-200"
+                            className="swiper-button-next z-10 bg-black text-white rounded-full p-2 shadow-md hover:opacity-80"
                             /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
                             /* @ts-ignore */
                             onClick={() => swiperRef.current?.slideNext()}
                         >
                             <ArrowRightIcon/>
                         </button>
-                    </>
-                )}
+                    </div>
+                </div>
             </span>
             <nav className="flex flex-row gap-10 mt-10 w-full">
                 <Swiper

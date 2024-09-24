@@ -94,7 +94,7 @@ export default function About({ language, isDarkMode }: AboutProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <span className={`flex flex-col p-2 md:p-6 rounded-lg my-4 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-black border'}`}>
+            <span className="flex flex-col p-2 md:p-6 rounded-lg my-4 bg-gray-100 text-black border">
                 <h1 className="text-3xl font-bold mb-5 text-gray-900 dark:text-white">{title}</h1>
                 <span className="flex flex-col md:flex-row items-center gap-6">
                     <img className="rounded-full border shadow-lg shadow-white dark:shadow-gray-900" src="/assets/profile-real.jpeg" alt="" title="" width={128} height={128} />

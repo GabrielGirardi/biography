@@ -24,7 +24,7 @@ export function App() {
     return (
         <BrowserRouter>
             <section className="min-h-screen flex flex-col p-4 lg:p-10">
-                <nav className="flex items-center w-full mb-10 relative md:w-1/2 lg:w-20 lg:absolute lg:mb-0 animate__fadeIn duration-1000">
+                <nav className="flex items-center w-full mb-10 relative md:w-1/2 lg:w-20 lg:fixed lg:mb-0 animate__fadeIn duration-1000">
                     <Menu language={language} toggleLanguage={toggleLanguage} />
                 </nav>
                 <Layout/>

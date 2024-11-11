@@ -132,20 +132,22 @@ export default function SnakeGame() {
 
     return (
         <div className="flex flex-col items-center space-y-4">
+            {gameOver && (
+                <div className="flex flex-col items-center space-y-2">
+                    <div className="text-xl font-bold text-red-500">Game Over!</div>
+                </div>
+            )}
             <canvas
                 ref={canvasRef}
                 width={gridSize * CELL_SIZE}
                 height={gridSize * CELL_SIZE}
                 className="border border-gray-300 max-w-full"
             />
-            <div className="text-lg font-semibold">Score: {score}</div>
-            {gameOver && (
-                <div className="flex flex-col items-center space-y-2">
-                    <div className="text-xl font-bold text-red-500">Game Over!</div>
-                    <Button onClick={resetGame}>Restart</Button>
-                </div>
+            { gameOver && (
+                <Button onClick={resetGame}>Start</Button>
             )}
-            <div className="grid grid-cols-3 gap-2 mt-4 sm:hidden">
+            <div className="text-lg font-semibold">Score: {score}</div>
+            <div className="grid grid-cols-3 gap-2 mt-4">
                 <div></div>
                 <Button size="icon" onClick={() => handleJoystickClick({ x: 0, y: -1 })}>
                     <ArrowUp className="h-4 w-4" />

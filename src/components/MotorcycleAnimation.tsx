@@ -2,9 +2,9 @@ import React from 'react';
 
 const MotorcycleAnimation: React.FC = () => {
     return (
-        <div className="fixed bottom-0 left-0 w-full h-[64px] pointer-events-none">
+        <div className="absolute bottom-0 left-0 w-full h-[64px] pointer-events-none">
             <div className="animate-ride absolute bottom-2 left-0">
-                <svg width="96" height="96" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="72" height="72" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="m392.5 392.5-6.25-78.75-42.5 3.75 6.25 68.75-117.5 55 47.5 37.5s33.75-13.75 31.25-25L382.5 415c8.75-3.75 12.5-13.75 10-22.5"
                         fill="#231F20"/>

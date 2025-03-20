@@ -12,33 +12,32 @@ const SkillsSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const frontendSkills: Skill[] = [
-    { name: 'Javascript', level: 100, color: '#FFCA28' },
-    { name: 'TypeScript', level: 100, color: '#3178C6' },
-    { name: 'Tailwind CSS', level: 100, color: '#38B2AC' },
-    { name: 'CSS/SCSS', level: 100, color: '#CC6699' },
-    { name: 'React', level: 90, color: '#61DAFB' },
-    { name: 'Vue', level: 90, color: '#47A248' },
-    { name: 'NextJS', level: 60, color: '#000000' },
+    { name: 'Javascript', level: 0, color: '#FFCA28' },
+    { name: 'TypeScript', level: 0, color: '#3178C6' },
+    { name: 'Tailwind CSS', level: 0, color: '#38B2AC' },
+    { name: 'CSS/SCSS', level: 0, color: '#CC6699' },
+    { name: 'React', level: 0, color: '#61DAFB' },
+    { name: 'Vue', level: 0, color: '#47A248' },
+    { name: 'Next.JS', level: 0, color: '#000000' },
   ];
 
   const backendSkills: Skill[] = [
-    { name: 'Node.js', level: 90, color: '#339933' },
-    { name: 'Express', level: 90, color: '#000000' },
-    { name: 'MongoDB', level: 80, color: '#47A248' },
-    { name: 'PostgreSQL', level: 80, color: '#336791' },
-    { name: 'PHP', level: 75, color: '#4B32C3' },
-    { name: 'Python', level: 30, color: '#FFCA28' },
-    { name: 'C#', level: 30, color: '#FF9900' },
+    { name: 'Node.js', level: 0, color: '#339933' },
+    { name: 'Express', level: 0, color: '#000000' },
+    { name: 'MongoDB', level: 0, color: '#47A248' },
+    { name: 'PostgreSQL', level: 0, color: '#336791' },
+    { name: 'PHP', level: 0, color: '#4B32C3' },
+    { name: 'Python', level: 0, color: '#FFCA28' },
+    { name: 'C#', level: 0, color: '#FF9900' },
   ];
 
   const toolsSkills: Skill[] = [
-    { name: 'Git / Gitlab', level: 100, color: '#F05032' },
-    { name: 'BitBucket', level: 100, color: '#007ACC' },
-    { name: 'Design System', level: 100, color: '#FFCA28' },
-    { name: 'Responsive Design', level: 100, color: '#C21325' },
-    { name: 'Figma', level: 90, color: '#F24E1E' },
-    { name: 'Docker', level: 40, color: '#2496ED' },
-    { name: 'CI/CD', level: 25, color: '#4B32C3' },
+    { name: 'Git / Gitlab', level: 0, color: '#F05032' },
+    { name: 'BitBucket', level: 0, color: '#007ACC' },
+    { name: 'Design System', level: 0, color: '#FF9900' },
+    { name: 'Responsive Design', level: 0, color: '#C21325' },
+    { name: 'Docker', level: 0, color: '#2496ED' },
+    { name: 'CI/CD', level: 0, color: '#4B32C3' },
   ];
 
   useEffect(() => {
@@ -71,16 +70,8 @@ const SkillsSection: React.FC = () => {
 
   const SkillBar: React.FC<{ skill: Skill; delay: number }> = ({ skill, delay }) => (
     <div className="mb-4 animate-on-scroll" style={{ animationDelay: `${delay}ms` }}>
-      <div className="flex justify-between mb-1">
-        <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-        <span className="text-sm text-gray-500">{skill.level}%</span>
-      </div>
-      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-        <div
-          className="skill-bar-fill h-full rounded-full"
-          style={{ backgroundColor: skill.color || '#3dae2b', width: `${skill.level}%` }}
-          data-level={skill.level}
-        ></div>
+      <div className="flex justify-between mb-1 p-1 px-2 rounded-xl" style={{ backgroundColor: skill.color }}>
+        <span className="text-sm font-medium text-white">{skill.name}</span>
       </div>
     </div>
   );

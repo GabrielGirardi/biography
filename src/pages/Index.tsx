@@ -16,12 +16,10 @@ const Index = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    // Simulate loading delay
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
 
-    // Track scroll progress
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const currentProgress = Math.min(window.scrollY / totalScroll, 1);
@@ -49,19 +47,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 bg-noise">
-      {/* Background gradients */}
       <div className="fixed inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900 to-gray-950 z-0"></div>
 
-      {/* Noise overlay */}
       <div className="fixed inset-0 bg-noise opacity-40 z-0"></div>
 
-      {/* Subtle grid overlay */}
       <div className="fixed inset-0 z-0 opacity-[0.02]" style={{
         backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
         backgroundSize: '40px 40px'
       }}></div>
 
-      {/* Scroll progress indicator */}
       <div
         className="fixed top-0 left-0 h-1 bg-gradient-to-r from-kawasaki-green via-blue-400 to-kawasaki-green z-50 transition-all duration-150"
         style={{ width: `${scrollProgress * 100}%` }}
@@ -75,8 +69,8 @@ const Index = () => {
           <HeroSection />
           <AboutSection />
           <SkillsSection />
-          <TravelSection />
           <ProjectsSection />
+          <TravelSection />
           <ContactSection />
         </main>
 

@@ -43,7 +43,6 @@ const HeroSection: React.FC = () => {
           </div>
         </ParallaxBackground>
 
-        {/* Abstract geometric shapes for background */}
         <ParallaxBackground speed={0.3} direction="down" intensity="medium" className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-kawasaki-green/10 to-transparent rounded-full blur-3xl opacity-30 -translate-y-1/2 -translate-x-1/2"></div>
         </ParallaxBackground>

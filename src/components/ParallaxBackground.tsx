@@ -1,31 +1,83 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, CSSProperties } from 'react';
 
-const ParallaxBackground: React.FC = () => {
-    const parallaxRef = useRef<HTMLDivElement>(null);
+interface ParallaxBackgroundProps {
+  children: React.ReactNode;
+  speed?: number;
+  className?: string;
+  direction?: 'up' | 'down' | 'left' | 'right';
+  intensity?: 'light' | 'medium' | 'strong';
+  overflow?: boolean;
+  style?: CSSProperties;
+}
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (parallaxRef.current) {
-                const scrollPosition = window.pageYOffset;
-                parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-            }
-        };
+const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
+  children,
+  speed = 0.5,
+  className = "",
+  direction = "up",
+  intensity = "medium",
+  overflow = false,
+  style = {}
+}) => {
+  const parallaxRef = useRef<HTMLDivElement>(null);
 
-        window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!parallaxRef.current) return;
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+      const scrollY = window.scrollY;
+      const element = parallaxRef.current;
+      const elementPosition = element.getBoundingClientRect().top + scrollY;
 
-    return (
-        <div className="fixed inset-0 pointer-events-none z-0" ref={parallaxRef}>
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-            <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-            <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-            <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-6000"></div>
-        </div>
-    );
+      // Adjust speed based on intensity
+      let intensityMultiplier = 1;
+      switch (intensity) {
+        case "light": intensityMultiplier = 0.5; break;
+        case "strong": intensityMultiplier = 1.5; break;
+        default: intensityMultiplier = 1;
+      }
+
+      const calculatedSpeed = speed * intensityMultiplier;
+      const offset = (scrollY - elementPosition) * calculatedSpeed;
+
+      // Apply different transform based on direction
+      let transform = '';
+      switch (direction) {
+        case 'up':
+          transform = `translateY(${offset}px)`;
+          break;
+        case 'down':
+          transform = `translateY(-${offset}px)`;
+          break;
+        case 'left':
+          transform = `translateX(${offset}px)`;
+          break;
+        case 'right':
+          transform = `translateX(-${offset}px)`;
+          break;
+        default:
+          transform = `translateY(${offset}px)`;
+      }
+
+      element.style.transform = transform;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [speed, direction, intensity]);
+
+  return (
+    <div
+      ref={parallaxRef}
+      className={`transition-transform duration-200 ${overflow ? '' : 'overflow-hidden'} ${className}`}
+      style={style}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default ParallaxBackground;

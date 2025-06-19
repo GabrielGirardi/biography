@@ -41,7 +41,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 bg-gray-50 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block bg-kawasaki-green/10 px-3 py-1 rounded-full text-sm font-medium text-kawasaki-green mb-4 animate-on-scroll opacity-0">
+          <div className="inline-block bg-yellow-500/10 px-3 py-1 rounded-full text-sm font-medium text-yellow-500 mb-4 animate-on-scroll opacity-0">
             {t('contact')}
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 animate-on-scroll opacity-0">
@@ -62,20 +62,20 @@ const ContactSection: React.FC = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-kawasaki-green/10 flex items-center justify-center mr-4">
-                    <Mail className="w-5 h-5 text-kawasaki-green" />
+                  <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center mr-4">
+                    <Mail className="w-5 h-5 text-yellow-500" />
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-gray-900 mb-1">Email</h4>
-                    <a href="mailto:dev.ggirardi@gmail.com" className="text-gray-600 hover:text-kawasaki-green transition-colors cursor-hover">
+                    <a href="mailto:dev.ggirardi@gmail.com" className="text-gray-600 hover:text-yellow-500 transition-colors cursor-hover">
                       dev.ggirardi@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-kawasaki-green/10 flex items-center justify-center mr-4">
-                    <MapPin className="w-5 h-5 text-kawasaki-green" />
+                  <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center mr-4">
+                    <MapPin className="w-5 h-5 text-yellow-500" />
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-gray-900 mb-1">Location</h4>
@@ -86,12 +86,12 @@ const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-kawasaki-green/10 flex items-center justify-center mr-4">
-                    <Phone className="w-5 h-5 text-kawasaki-green" />
+                  <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center mr-4">
+                    <Phone className="w-5 h-5 text-yellow-500" />
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-gray-900 mb-1">Phone</h4>
-                    <a href="tel:+5547997135921" className="text-gray-600 hover:text-kawasaki-green transition-colors cursor-hover">
+                    <a href="tel:+5547997135921" className="text-gray-600 hover:text-yellow-500 transition-colors cursor-hover">
                       +55 (47) 99713-5921
                     </a>
                   </div>
@@ -142,7 +142,7 @@ const ContactSection: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-kawasaki-green/30 focus:border-kawasaki-green transition-colors cursor-text"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500/30 focus:border-yellow-500 transition-colors cursor-text"
                 />
               </div>
 
@@ -157,7 +157,7 @@ const ContactSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-kawasaki-green/30 focus:border-kawasaki-green transition-colors cursor-text"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500/30 focus:border-yellow-500 transition-colors cursor-text"
                 />
               </div>
 
@@ -172,14 +172,14 @@ const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-kawasaki-green/30 focus:border-kawasaki-green transition-colors cursor-text"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500/30 focus:border-yellow-500 transition-colors cursor-text"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center px-6 py-3 rounded-full bg-kawasaki-green text-white font-medium transition-all hover:shadow-lg hover:shadow-kawasaki-green/20 hover:translate-y-[-2px] disabled:opacity-70 disabled:cursor-not-allowed cursor-hover"
+                className="w-full inline-flex items-center justify-center px-6 py-3 rounded-full bg-yellow-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-yellow-500/20 hover:translate-y-[-2px] disabled:opacity-70 disabled:cursor-not-allowed cursor-hover"
               >
                 {isSubmitting ? (
                   <>
@@ -201,7 +201,7 @@ const ContactSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-bl from-kawasaki-green/10 to-transparent rounded-full opacity-50 translate-y-1/4 translate-x-1/4"></div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-bl from-yellow-500/10 to-transparent rounded-full opacity-50 translate-y-1/4 translate-x-1/4"></div>
     </section>
   );
 };

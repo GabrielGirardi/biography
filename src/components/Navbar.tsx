@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200/20 shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white/20 backdrop-blur-md border-b border-gray-200/20 shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
               <span className="text-gradient">&lt;GG</span>
               <span className="text-gradient">/&gt;</span>
             </span>
-            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-kawasaki-green transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="hover-link text-sm font-medium cursor-hover text-kawasaki-green"
+                className="hover-link text-sm font-medium cursor-hover text-yellow-500"
               >
                 {link.name}
               </a>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
 
             <button
               onClick={toggleLanguage}
-              className="flex items-center text-sm font-medium text-blue-500 hover:text-kawasaki-green transition-colors duration-200 cursor-hover"
+              className="flex items-center text-sm font-medium text-blue-500 hover:text-yellow-500 transition-colors duration-200 cursor-hover"
               aria-label={`Switch to ${language === 'en' ? 'Portuguese' : 'English'}`}
             >
               <Globe className="w-4 h-4 mr-1" />
@@ -92,7 +92,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`fixed inset-0 z-50 bg-white/90 backdrop-blur-md md:hidden transition-transform duration-300 ease-cubic ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -104,17 +103,16 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-2xl font-medium hover:text-kawasaki-green transition-colors duration-200 cursor-hover"
+                className="text-2xl font-medium hover:text-yellow-500 transition-colors duration-200 cursor-hover"
                 onClick={handleLinkClick}
               >
                 {link.name}
               </a>
             ))}
 
-            {/* Language toggle */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center text-2xl font-medium hover:text-kawasaki-green transition-colors duration-200 cursor-hover mt-4"
+              className="flex items-center text-2xl font-medium hover:text-yellow-500 transition-colors duration-200 cursor-hover mt-4"
               aria-label={`Switch to ${language === 'en' ? 'Portuguese' : 'English'}`}
             >
               <Globe className="w-5 h-5 mr-2" />

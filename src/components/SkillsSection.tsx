@@ -1,192 +1,106 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface Skill {
   name: string;
-  level: number;
-  color?: string;
+  category: string;
+  icon: string;
+  color: string;
 }
 
 const SkillsSection: React.FC = () => {
   const { t } = useLanguage();
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  const frontendSkills: Skill[] = [
-    { name: 'Javascript', level: 0, color: '#FFCA28' },
-    { name: 'TypeScript', level: 0, color: '#3178C6' },
-    { name: 'Tailwind CSS', level: 0, color: '#38B2AC' },
-    { name: 'CSS/SCSS', level: 0, color: '#CC6699' },
-    { name: 'React', level: 0, color: '#61DAFB' },
-    { name: 'Vue', level: 0, color: '#47A248' },
-    { name: 'Next.JS', level: 0, color: '#000000' },
+  const skills: Skill[] = [
+    { name: 'JavaScript', category: 'Frontend', icon: '⚡', color: '#FFD700' },
+    { name: 'TypeScript', category: 'Frontend', icon: '🔷', color: '#B8860B' },
+    { name: 'React', category: 'Frontend', icon: '⚛️', color: '#DAA520' },
+    { name: 'Vue.js', category: 'Frontend', icon: '💚', color: '#FFD700' },
+    { name: 'Next.js', category: 'Frontend', icon: '▲', color: '#B8860B' },
+    { name: 'Tailwind', category: 'Frontend', icon: '🌊', color: '#DAA520' },
+
+    { name: 'Node.js', category: 'Backend', icon: '🚀', color: '#FFD700' },
+    { name: 'Python', category: 'Backend', icon: '🐍', color: '#B8860B' },
+    { name: 'MongoDB', category: 'Backend', icon: '🍃', color: '#DAA520' },
+    { name: 'PostgreSQL', category: 'Backend', icon: '🐘', color: '#FFD700' },
+    { name: 'Express', category: 'Backend', icon: '⚡', color: '#B8860B' },
+    { name: 'GraphQL', category: 'Backend', icon: '🔗', color: '#DAA520' },
+
+    { name: 'Git', category: 'Tools', icon: '🌿', color: '#FFD700' },
+    { name: 'Docker', category: 'Tools', icon: '🐳', color: '#B8860B' },
+    { name: 'AWS', category: 'Tools', icon: '☁️', color: '#DAA520' },
+    { name: 'Figma', category: 'Tools', icon: '🎨', color: '#FFD700' },
   ];
 
-  const backendSkills: Skill[] = [
-    { name: 'Node.js', level: 0, color: '#339933' },
-    { name: 'Express', level: 0, color: '#000000' },
-    { name: 'MongoDB', level: 0, color: '#47A248' },
-    { name: 'PostgreSQL', level: 0, color: '#336791' },
-    { name: 'PHP', level: 0, color: '#4B32C3' },
-    { name: 'Python', level: 0, color: '#FFCA28' },
-    { name: 'C#', level: 0, color: '#FF9900' },
-  ];
-
-  const toolsSkills: Skill[] = [
-    { name: 'Git / Gitlab', level: 0, color: '#F05032' },
-    { name: 'BitBucket', level: 0, color: '#007ACC' },
-    { name: 'Design System', level: 0, color: '#FF9900' },
-    { name: 'Responsive Design', level: 0, color: '#C21325' },
-    { name: 'Docker', level: 0, color: '#2496ED' },
-    { name: 'CI/CD', level: 0, color: '#4B32C3' },
-  ];
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
-  const SkillBar: React.FC<{ skill: Skill; delay: number }> = ({ skill, delay }) => (
-    <div className="mb-4 animate-on-scroll" style={{ animationDelay: `${delay}ms` }}>
-      <div className="flex justify-between mb-1 p-1 px-2 rounded-xl" style={{ backgroundColor: skill.color }}>
-        <span className="text-sm font-medium text-white">{skill.name}</span>
+  const SkillCard: React.FC<{ skill: Skill; index: number }> = ({ skill, index }) => (
+    <div
+      className={`skill-card ${hoveredSkill === skill.name ? 'hovered' : ''}`}
+      style={{
+        '--delay': `${index * 0.1}s`,
+        '--color': skill.color,
+      } as React.CSSProperties}
+      onMouseEnter={() => setHoveredSkill(skill.name)}
+      onMouseLeave={() => setHoveredSkill(null)}
+    >
+      <div className="card-glow"></div>
+      <div className="card-content">
+        <div className="skill-icon-wrapper">
+          <span className="skill-icon">{skill.icon}</span>
+        </div>
+        <div className="skill-info">
+          <h3 className="skill-name">{skill.name}</h3>
+          <span className="skill-category">{skill.category}</span>
+        </div>
+        <div className="skill-line"></div>
       </div>
     </div>
   );
 
   return (
-    <section
-      id="skills"
-      ref={sectionRef}
-      className="py-20 bg-gray-50 relative"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block bg-kawasaki-green/10 px-3 py-1 rounded-full text-sm font-medium text-kawasaki-green mb-4 animate-on-scroll opacity-0">
-            {t('skills')}
+    <section className="skills-universe min-h-screen py-20 relative">
+      <canvas ref={canvasRef} className="background-canvas" />
+      <div className="matrix-bg"></div>
+      <div className="floating-elements">
+        {Array.from({ length: 10 }).map((_, i) => (
+          <div
+            key={i}
+            className="floating-code"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 15}s`,
+            }}
+          >
+            {['const', 'function', 'return', 'import', 'export', 'async', 'await'][i % 7]}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 animate-on-scroll opacity-0">
-            {t('skillsTitle')}
-          </h2>
-          <p className="text-gray-600 animate-on-scroll opacity-0">
-            {t('skillsDescription')}
-          </p>
-        </div>
+        ))}
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll opacity-0">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                <svg
-                  className="w-5 h-5 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">{t('frontend')}</h3>
+      <div className="skills-content relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="section-title">
+            <div className="dev-badge inline-block px-6 py-3 rounded-full mb-6">
+              <span className="text-yellow-400 font-medium">💻 Full Stack Developer</span>
             </div>
 
-            <div>
-              {frontendSkills.map((skill, index) => (
-                <SkillBar key={skill.name} skill={skill} delay={index * 100} />
-              ))}
-            </div>
+            <h2 className="title-main golden-text">
+              {t('skillsTitle')}
+            </h2>
+            <div className="golden-line"></div>
+            <p className="title-sub">
+              {t('skillsDescription')}
+            </p>
           </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll opacity-0" style={{ animationDelay: '200ms' }}>
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
-                <svg
-                  className="w-5 h-5 text-green-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">{t('backend')}</h3>
-            </div>
-
-            <div>
-              {backendSkills.map((skill, index) => (
-                <SkillBar key={skill.name} skill={skill} delay={100 + index * 100} />
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll opacity-0" style={{ animationDelay: '400ms' }}>
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
-                <svg
-                  className="w-5 h-5 text-purple-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">{t('tools')}</h3>
-            </div>
-
-            <div>
-              {toolsSkills.map((skill, index) => (
-                <SkillBar key={skill.name} skill={skill} delay={200 + index * 100} />
-              ))}
-            </div>
+          <div className="skills-grid" ref={containerRef}>
+            {skills.map((skill, index) => (
+              <SkillCard key={skill.name} skill={skill} index={index} />
+            ))}
           </div>
         </div>
       </div>
-
-      <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-gradient-to-bl from-kawasaki-green/10 to-transparent rounded-full opacity-60"></div>
-      <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-transparent rounded-full opacity-60"></div>
     </section>
   );
 };

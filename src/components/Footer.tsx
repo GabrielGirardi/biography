@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
       }}></div>
 
       <ParallaxBackground speed={0.2} direction="up" intensity="light" className="absolute inset-0 pointer-events-none">
-        <div className="absolute -bottom-12 -left-12 w-96 h-96 bg-gradient-radial from-kawasaki-green/5 to-transparent rounded-full opacity-50"></div>
+        <div className="absolute -bottom-12 -left-12 w-96 h-96 bg-gradient-radial from-yellow-500/5 to-transparent rounded-full opacity-50"></div>
       </ParallaxBackground>
 
       <ParallaxBackground speed={0.3} direction="down" intensity="light" className="absolute inset-0 pointer-events-none">
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center">
               <span className="text-2xl font-bold">
-                <span className="text-kawasaki-green">&lt;Dev</span>
+                <span className="text-yellow-500">&lt;Dev</span>
                 <span className="text-gray-300">/&gt;</span>
               </span>
             </div>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 href="https://github.com/gabrielgirardi/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 cursor-hover"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 cursor-hover"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -57,14 +57,14 @@ const Footer: React.FC = () => {
                 href="https://www.linkedin.com/in/ggirardii/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 cursor-hover"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 cursor-hover"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="mailto:dev.ggirardi@gmail.com"
-                className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 cursor-hover"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 cursor-hover"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 flex items-center cursor-hover"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 flex items-center cursor-hover"
                 >
                   <Code className="w-4 h-4 mr-2" />
                   {t('about')}
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#skills"
-                  className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 flex items-center cursor-hover"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 flex items-center cursor-hover"
                 >
                   <Coffee className="w-4 h-4 mr-2" />
                   {t('skills')}
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#projects"
-                  className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 flex items-center cursor-hover"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 flex items-center cursor-hover"
                 >
                   <Code className="w-4 h-4 mr-2" />
                   {t('projects')}
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-400 hover:text-kawasaki-green transition-colors duration-300 flex items-center cursor-hover"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-300 flex items-center cursor-hover"
                 >
                   <Mail className="w-4 h-4 mr-2" />
                   {t('contact')}
@@ -122,20 +122,20 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-400">
-                <Mail className="w-4 h-4 mr-2 text-kawasaki-green" />
-                <a href="mailto:hello@example.com" className="hover:text-kawasaki-green transition-colors duration-300 cursor-hover">
+                <Mail className="w-4 h-4 mr-2 text-yellow-500" />
+                <a href="mailto:hello@example.com" className="hover:text-yellow-500 transition-colors duration-300 cursor-hover">
                   dev.ggirardi@gmail.com
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
-                <Globe className="w-4 h-4 mr-2 text-kawasaki-green" />
-                <a href="https://dev-gg.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-kawasaki-green transition-colors duration-300 cursor-hover">
+                <Globe className="w-4 h-4 mr-2 text-yellow-500" />
+                <a href="https://dev-gg.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 transition-colors duration-300 cursor-hover">
                   Website
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
-                <Bike className="w-4 h-4 mr-2 text-kawasaki-green" />
-                <span>Kawasaki Versys</span>
+                <Bike className="w-4 h-4 mr-2 text-yellow-500" />
+                <span>Dev/Ride Life</span>
               </li>
             </ul>
           </div>
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
           </p>
           <button
             onClick={scrollToTop}
-            className="mt-6 md:mt-0 p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-kawasaki-green hover:text-white transition-all duration-300 cursor-hover group"
+            className="mt-6 md:mt-0 p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-yellow-500 hover:text-white transition-all duration-300 cursor-hover group"
             aria-label="Scroll to top"
           >
             <ArrowUp className="w-4 h-4 group-hover:animate-bounce" />

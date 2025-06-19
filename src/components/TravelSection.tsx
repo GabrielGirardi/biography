@@ -8,12 +8,12 @@ import ParallaxBackground from './ParallaxBackground';
 const TravelSection: React.FC = () => {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [activeTab, setActiveTab] = useState("routes");
+  const [activeTab, setActiveTab] = useState("stats");
 
   const travels = {
     en: {
       title: "Motorcycle Travels",
-      description: "Exploring the world on my Kawasaki Versys 650",
+      description: "Exploring the world on my Yamaha XJ6F",
       routesTab: "Favorite Routes",
       experiencesTab: "Experiences",
       statsTab: "Riding Stats",
@@ -79,7 +79,7 @@ const TravelSection: React.FC = () => {
     },
     pt: {
       title: "Viagens de Moto",
-      description: "Explorando o mundo na minha Kawasaki Versys 650",
+      description: "Explorando o mundo na minha Yamaha XJ6F",
       routesTab: "Rotas Favoritas",
       experiencesTab: "Experiências",
       statsTab: "Estatísticas",
@@ -182,15 +182,15 @@ const TravelSection: React.FC = () => {
       <div className="absolute inset-0 bg-noise opacity-30 z-0"></div>
 
       <ParallaxBackground speed={0.2} direction="up" intensity="light" className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-kawasaki-green/10 to-transparent opacity-40"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-yellow-500/10 to-transparent opacity-40"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-500/10 to-transparent opacity-40"></div>
       </ParallaxBackground>
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-kawasaki-green/10 text-kawasaki-green text-sm font-medium mb-4 animate-on-scroll opacity-0">
+          <div className="inline-block px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-sm font-medium mb-4 animate-on-scroll opacity-0">
             <Bike className="w-4 h-4 inline-block mr-2" />
-            Kawasaki Versys 650
+            Yamaha XJ6F
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-on-scroll opacity-0" style={{ animationDelay: '100ms' }}>
             {content.title}
@@ -200,20 +200,20 @@ const TravelSection: React.FC = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="routes" onValueChange={setActiveTab} className="space-y-8">
+        <Tabs defaultValue="stats" onValueChange={setActiveTab} className="space-y-8">
           <div className="flex justify-center">
             <TabsList className="bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="routes" className="data-[state=active]:bg-kawasaki-green/20 data-[state=active]:text-kawasaki-green">
+              <TabsTrigger value="stats" className="data-[state=active]:bg-yellow-500/20 data-[state=active]:text-yellow-500">
+                <Navigation className="w-4 h-4 mr-2" />
+                {content.statsTab}
+              </TabsTrigger>
+              <TabsTrigger value="routes" className="data-[state=active]:bg-yellow-500/20 data-[state=active]:text-yellow-500">
                 <Map className="w-4 h-4 mr-2" />
                 {content.routesTab}
               </TabsTrigger>
-              <TabsTrigger value="experiences" className="data-[state=active]:bg-kawasaki-green/20 data-[state=active]:text-kawasaki-green">
+              <TabsTrigger value="experiences" className="data-[state=active]:bg-yellow-500/20 data-[state=active]:text-yellow-500">
                 <Compass className="w-4 h-4 mr-2" />
                 {content.experiencesTab}
-              </TabsTrigger>
-              <TabsTrigger value="stats" className="data-[state=active]:bg-kawasaki-green/20 data-[state=active]:text-kawasaki-green">
-                <Navigation className="w-4 h-4 mr-2" />
-                {content.statsTab}
               </TabsTrigger>
             </TabsList>
           </div>
@@ -243,7 +243,7 @@ const TravelSection: React.FC = () => {
                     <CardContent className="text-gray-300">
                       <p>{route.description}</p>
                       <div className="mt-4 pt-4 border-t border-gray-700">
-                        <p className="text-sm font-medium text-kawasaki-green">Highlights:</p>
+                        <p className="text-sm font-medium text-yellow-500">Highlights:</p>
                         <p className="text-sm text-gray-400">{route.highlights}</p>
                       </div>
                     </CardContent>
@@ -266,7 +266,7 @@ const TravelSection: React.FC = () => {
                 >
                   <Card className="h-full border-0 bg-gray-800/40 backdrop-blur-sm hover:bg-gray-800/60 transition-all duration-300">
                     <CardHeader>
-                      <div className="text-kawasaki-green text-sm mb-2 flex items-center">
+                      <div className="text-yellow-500 text-sm mb-2 flex items-center">
                         <Calendar className="w-4 h-4 mr-2" />
                         {exp.date}
                       </div>
@@ -294,32 +294,32 @@ const TravelSection: React.FC = () => {
                 <CardContent>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-6">
                     <div className="text-center animate-on-scroll opacity-1" style={{ animationDelay: '100ms' }}>
-                      <div className="w-16 h-16 rounded-full bg-kawasaki-green/10 flex items-center justify-center mx-auto mb-3">
-                        <Bike className="w-8 h-8 text-kawasaki-green" />
+                      <div className="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mx-auto mb-3">
+                        <Bike className="w-8 h-8 text-yellow-500" />
                       </div>
                       <div className="text-3xl font-bold text-gray-100">{content.stats.totalDistance}</div>
                       <div className="text-sm text-gray-400">{content.kmRidden}</div>
                     </div>
 
                     <div className="text-center animate-on-scroll opacity-1" style={{ animationDelay: '200ms' }}>
-                      <div className="w-16 h-16 rounded-full bg-kawasaki-green/10 flex items-center justify-center mx-auto mb-3">
-                        <Map className="w-8 h-8 text-kawasaki-green" />
+                      <div className="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mx-auto mb-3">
+                        <Map className="w-8 h-8 text-yellow-500" />
                       </div>
                       <div className="text-3xl font-bold text-gray-100">{content.stats.countries}</div>
                       <div className="text-sm text-gray-400">{content.countries}</div>
                     </div>
 
                     <div className="text-center animate-on-scroll opacity-1" style={{ animationDelay: '300ms' }}>
-                      <div className="w-16 h-16 rounded-full bg-kawasaki-green/10 flex items-center justify-center mx-auto mb-3">
-                        <Navigation className="w-8 h-8 text-kawasaki-green" />
+                      <div className="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mx-auto mb-3">
+                        <Navigation className="w-8 h-8 text-yellow-500" />
                       </div>
                       <div className="text-3xl font-bold text-gray-100">{content.stats.longestRide}</div>
                       <div className="text-sm text-gray-400">{content.longestRide}</div>
                     </div>
 
                     <div className="text-center animate-on-scroll opacity-1" style={{ animationDelay: '400ms' }}>
-                      <div className="w-16 h-16 rounded-full bg-kawasaki-green/10 flex items-center justify-center mx-auto mb-3">
-                        <Compass className="w-8 h-8 text-kawasaki-green" />
+                      <div className="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mx-auto mb-3">
+                        <Compass className="w-8 h-8 text-yellow-500" />
                       </div>
                       <div className="text-3xl font-bold text-gray-100">{content.stats.trips}+</div>
                       <div className="text-sm text-gray-400">trips</div>
@@ -328,7 +328,7 @@ const TravelSection: React.FC = () => {
 
                   <div className="mt-8 text-center">
                     <p className="text-gray-300">
-                      <span className="text-kawasaki-green font-medium">Favorite Road:</span> {content.stats.favoriteRoad}
+                      <span className="text-yellow-500 font-medium">Favorite Road:</span> {content.stats.favoriteRoad}
                     </p>
                   </div>
                 </CardContent>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowUpRight, CircleDollarSign } from 'lucide-react';
 import ParallaxBackground from './ParallaxBackground';
 
 interface Project {
@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'GoCatalog Platform',
+      title: 'GoCatalog - E-commerce Platform',
       description: language === 'en' ?
         'A modern e-commerce platform built with Next, Typescript, and Postgres.' :
         'Uma plataforma de e-commerce moderna construída com Next, Typescript, e Postgres.',
@@ -55,6 +55,66 @@ const ProjectsSection: React.FC = () => {
       githubUrl: 'https://github.com/GabrielGirardi/restaurant-system',
       featured: true,
     },
+    {
+      id: 4,
+      title: 'Flowhub - Focus on your work',
+      description: language === 'en' ?
+        'A productivity platform that helps you focus on your work.' :
+        'Uma plataforma de produtividade que ajuda você a se concentrar no seu trabalho.',
+      image: 'https://i.ibb.co/Q3KhjV7g/Captura-de-tela-de-2025-06-18-21-43-25.png',
+      tags: ['React', 'TypeScript', 'Tailwind', 'Framer Motion', 'Vercel'],
+      liveUrl: 'https://flow-hub-sable.vercel.app/',
+      githubUrl: 'https://github.com/GabrielGirardi/FlowHub',
+      featured: true,
+    },
+    {
+      id: 5,
+      title: 'LogPago - Payment System',
+      description: language === 'en' ?
+        'A payment system that allows you to manage your payments and transactions.' :
+        'Um sistema de pagamento que permite gerenciar seus pagamentos e transações.',
+      image: 'https://i.ibb.co/Hf5HBHgw/Captura-de-tela-de-2025-06-18-21-45-08.png',
+      tags: ['React', 'TypeScript', 'Tailwind', 'Node', 'Postgres'],
+      liveUrl: '',
+      githubUrl: '',
+      featured: true,
+    },
+    {
+      id: 6,
+      title: 'Weather Forecast - Weather App',
+      description: language === 'en' ?
+        'A weather app that provides real-time weather updates and forecasts.' :
+        'Um aplicativo de clima que fornece atualizações e previsões meteorológicas em tempo real.',
+      image: 'https://i.ibb.co/gLDNB5bV/Captura-de-tela-de-2025-06-18-21-55-58.png',
+      tags: ['JQuery', 'CSS', 'SCSS', 'Vercel'],
+      liveUrl: 'https://weather-forecast-gg.vercel.app/',
+      githubUrl: 'https://github.com/GabrielGirardi/weather-forecast',
+      featured: true,
+    },
+    {
+      id: 7,
+      title: 'Website - Trevo Alumínios',
+      description: language === 'en' ?
+        'Development of a commercial website for Trevo Alumínios, showcasing their products and services.' :
+        'Desenvolvimento de um website comercial para Trevo Alumínios, destacando seus produtos e serviços.',
+      image: 'https://i.ibb.co/7NxnM1nR/Captura-de-tela-de-2025-06-18-22-00-06.png',
+      tags: ['React', 'TypeScript', 'Tailwind', 'Framer Motion', 'Node', 'Vercel', 'Postgres'],
+      liveUrl: 'https://www.aluminiostrevo.com.br/',
+      githubUrl: '',
+      featured: true,
+    },
+    {
+      id: 8,
+      title: 'Fleet Manager - Package ERP System',
+      description: language === 'en' ?
+        'A comprehensive ERP system for package management, including features like tracking, inventory, and reporting.' :
+        'Um sistema ERP abrangente para gerenciamento de pacotes, incluindo recursos como rastreamento, inventário e relatórios.',
+      image: 'https://i.ibb.co/nswZ5Jb2/Captura-de-tela-de-2025-06-18-22-07-09.png',
+      tags: ['React', 'TypeScript', 'MaterialUI', 'Tailwind', 'Node', 'MongoDB'],
+      liveUrl: '',
+      githubUrl: '',
+      featured: true,
+    }
   ];
 
   const allTags = Array.from(new Set(projects.flatMap(project => project.tags)));
@@ -102,7 +162,7 @@ const ProjectsSection: React.FC = () => {
     >
       <div className="absolute inset-0 z-0">
         <ParallaxBackground speed={0.2} className="absolute -left-20 top-20 opacity-10">
-          <div className="w-64 h-64 rounded-full bg-kawasaki-green"></div>
+          <div className="w-64 h-64 rounded-full bg-yellow-500"></div>
         </ParallaxBackground>
         <ParallaxBackground speed={0.3} className="absolute right-10 top-40 opacity-10">
           <div className="w-96 h-96 rounded-full bg-blue-400"></div>
@@ -114,7 +174,7 @@ const ProjectsSection: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block bg-kawasaki-green/10 px-3 py-1 rounded-full text-sm font-medium text-kawasaki-green mb-4 animate-on-scroll opacity-0">
+          <div className="inline-block bg-yellow-500/10 px-3 py-1 rounded-full text-sm font-medium text-yellow-500 mb-4 animate-on-scroll opacity-0">
             {t('projects')}
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 animate-on-scroll opacity-0">
@@ -129,7 +189,7 @@ const ProjectsSection: React.FC = () => {
               onClick={() => setSelectedTag(null)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
                 selectedTag === null
-                  ? 'bg-kawasaki-green text-white'
+                  ? 'bg-yellow-500 text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -141,7 +201,7 @@ const ProjectsSection: React.FC = () => {
                 onClick={() => setSelectedTag(tag)}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
                   selectedTag === tag
-                    ? 'bg-kawasaki-green text-white'
+                    ? 'bg-yellow-500 text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -177,15 +237,17 @@ const ProjectsSection: React.FC = () => {
                         <Github className="w-4 h-4" />
                       </a>
                     )}
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-gray-800 hover:bg-white transition-colors cursor-hover"
-                      aria-label="Live preview"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-gray-800 hover:bg-white transition-colors cursor-hover"
+                        aria-label="Live preview"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -209,17 +271,18 @@ const ProjectsSection: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">{project.description}</p>
 
-                {/* Links */}
                 <div className="flex justify-between items-center">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-kawasaki-green hover:text-kawasaki-green/80 font-medium text-sm flex items-center cursor-hover"
-                  >
-                    {t('viewLive')}
-                    <ArrowUpRight className="w-4 h-4 ml-1" />
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-yellow-500 hover:text-yellow-500/80 font-medium text-sm flex items-center cursor-hover"
+                    >
+                      {t('viewLive')}
+                      <ArrowUpRight className="w-4 h-4 ml-1" />
+                    </a>
+                  )}
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
@@ -237,13 +300,22 @@ const ProjectsSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 space-x-2">
           <a
+            target="_blank"
             href="https://github.com/GabrielGirardi"
             className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 font-medium transition-all hover:shadow-lg hover:bg-gray-50 hover:translate-y-[-2px] cursor-hover"
           >
             {t('viewAll')}
             <ArrowUpRight className="w-5 h-5 ml-2" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ggirardii/"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 font-medium transition-all hover:shadow-lg hover:bg-gray-50 hover:translate-y-[-2px] cursor-hover"
+          >
+            {t('budget')}
+            <CircleDollarSign className="w-5 h-5 ml-2" />
           </a>
         </div>
       </div>

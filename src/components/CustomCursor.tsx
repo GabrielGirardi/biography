@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const CustomCursor: React.FC = () => {
+  const isMobile = useIsMobile();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
@@ -49,6 +51,11 @@ const CustomCursor: React.FC = () => {
   }, []);
 
   const cursorSize = isHovering ? 40 : isClicking ? 16 : 24;
+
+  // Don't render custom cursor on mobile devices
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <>

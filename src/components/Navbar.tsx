@@ -46,6 +46,7 @@ const Navbar: React.FC = () => {
     { name: t('home'), href: '/#hero' },
     { name: t('about'), href: '/#about' },
     { name: t('skills'), href: '/#skills' },
+    { name: t('ai'), href: '/#ai' },
     { name: t('projects'), href: '/#projects' },
     { name: t('contact'), href: '/#contact' },
   ];

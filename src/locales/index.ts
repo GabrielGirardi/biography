@@ -1,10 +1,11 @@
 export const en = {
-  // Navigation
-  home: "Home",
-  about: "About",
-  skills: "Skills",
-  projects: "Projects",
-  contact: "Contact",
+   // Navigation
+   home: "Home",
+   about: "About",
+   skills: "Skills",
+   ai: "AI",
+   projects: "Projects",
+   contact: "Contact",
 
   // Hero Section
   greeting: "Hi there, I'm",
@@ -64,21 +65,73 @@ export const en = {
   copyright: "All rights reserved.",
   designedBy: "Designed & Developed with ♥ by GG.",
 
-  // Misc
-  loading: "Loading...",
-  switchLanguage: "Português",
+   // AI Experience Section
+   aiTitle: "AI Experience",
+   aiDescription: "How I leverage AI to accelerate development, enhance creativity, and optimize workflows",
+   aiAcceleration: "Development Acceleration",
+   aiAccelerationDesc: "Using Claude, GitHub Copilot, and Codex to supercharge my development workflow with intelligent code generation, debugging, and automation.",
+   aiGeneration: "Code Generation",
+   aiGenerationDesc: "Leveraging AI for rapid prototyping and implementation using smart work trees and efficient task delivery.",
+   aiDebugging: "Intelligent Debugging",
+   aiDebuggingDesc: "My AI copilot helps detect errors, validate tests, and ensure code quality at every stage.",
+   aiDocumentation: "Documentation & Changelogs",
+   aiDocumentationDesc: "Automating documentation writing and changelog generation for better project tracking.",
+   aiImprovementPercent: "60% time improvement",
+   aiImprovementDesc: "Average improvement in task delivery and problem-solving efficiency",
 
-  // Language key for TravelSection to use
-  language: "en",
+   aiCreative: "Creative & Design Solutions",
+   aiCreativeDesc: "Transforming ideas into polished UI/UX through AI-assisted design and component development.",
+   aiIdeas: "Design Brainstorming",
+   aiIdeasDesc: "Using AI to generate ideas and comprehensive user experience solutions avoiding bugs and security holes.",
+   aiFigmaClaudeIntegration: "Figma + Claude Integration",
+   aiFigmaClaudeIntegrationDesc: "Enhanced component and page design workflow with AI-assisted visual prototyping.",
+   aiPRReviewer: "Automated PR Review",
+   aiPRReviewerDesc: "Custom Claude reviewer analyzing PRs with detailed feedback, file changes summary, and production-readiness scoring (0-5). Only merge at score 5.",
+
+   aiProductivity: "Research & Productivity Automation",
+   aiProductivityDesc: "Building intelligent automation systems that reduce manual work and catch production issues before they matter.",
+   aiSentryAutomation: "Sentry Issue Automation",
+   aiSentryAutomationDesc: "Daily validation of production issues at 9 AM (weekdays). Automatically creates Jira tasks, fixes, and tests using vitest.",
+   aiMCPIntegration: "MCP Context Integration",
+   aiMCPIntegrationDesc: "Enhanced AI context understanding with deeper access to logs and system signals.",
+   aiAlignmentApproach: "Understanding-First Approach",
+   aiAlignmentApproachDesc: "Always understanding AI steps and following flows to stay in sync with AI-generated solutions.",
+
+   aiTools: "AI Tools & Platforms I Use",
+   aiClaude: "Claude",
+   aiGithubCopilot: "GitHub Copilot",
+   aiCodex: "Codex",
+   aiChatGPT: "ChatGPT",
+   aiMCPIntegrations: "MCP Integrations",
+   aiSentryMCP: "Sentry MCP",
+   aiSignozMCP: "Signoz MCP",
+   aiJiraMCP: "Jira MCP",
+
+   aiAchievement: "Major Achievements",
+   aiAchievementDesc: "Transforming code quality and production reliability through intelligent automation",
+   aiEvents185k: "185K",
+   aiEventsBefore: "error events before",
+   aiEventsAfter: "error events after 3 months",
+   aiPRReviewAchievement: "Intelligent PR Review System",
+   aiPRReviewDesc: "Custom Claude AI reviewer automating code quality checks on every PR with detailed feedback, scoring system (0-5), and production-ready validation.",
+   aiPRDesignFeatures: "Automated Analysis",
+
+   // Misc
+   loading: "Loading...",
+   switchLanguage: "Português",
+
+   // Language key for TravelSection to use
+   language: "en",
 };
 
 export const ptBR = {
-  // Navigation
-  home: "Início",
-  about: "Sobre",
-  skills: "Habilidades",
-  projects: "Projetos",
-  contact: "Contato",
+   // Navigation
+   home: "Início",
+   about: "Sobre",
+   skills: "Habilidades",
+   ai: "IA",
+   projects: "Projetos",
+   contact: "Contato",
 
   // Hero Section
   greeting: "Olá, eu sou",
@@ -125,23 +178,74 @@ export const ptBR = {
   viewCode: "Ver código",
 
   // Contact Section
-  contactTitle: "Entre em Contato",
-  contactDescription: "Tem um projeto em mente ou apenas quer dizer olá? Sinta-se à vontade para entrar em contato.",
-  nameLabel: "Nome",
-  emailLabel: "Email",
-  messageLabel: "Mensagem",
-  sendMessage: "Enviar Mensagem",
-  messageSent: "Mensagem enviada com sucesso!",
-  errorMessage: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
+   contactTitle: "Entre em Contato",
+   contactDescription: "Tem um projeto em mente ou apenas quer dizer olá? Sinta-se à vontade para entrar em contato.",
+   nameLabel: "Nome",
+   emailLabel: "Email",
+   messageLabel: "Mensagem",
+   sendMessage: "Enviar Mensagem",
+   messageSent: "Mensagem enviada com sucesso!",
+   errorMessage: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
 
-  // Footer
-  copyright: "Todos os direitos reservados.",
-  designedBy: "Projetado & Desenvolvido com ♥ por GG.",
+   // AI Experience Section
+   aiTitle: "Experiência com IA",
+   aiDescription: "Como eu aproveito IA para acelerar desenvolvimento, aprimorar criatividade e otimizar fluxos de trabalho",
+   aiAcceleration: "Aceleração de Desenvolvimento",
+   aiAccelerationDesc: "Usando Claude, GitHub Copilot e Codex para turbinar meu fluxo de desenvolvimento com geração inteligente de código, debug e automação.",
+   aiGeneration: "Geração de Código",
+   aiGenerationDesc: "Aproveitando IA para prototipagem rápida e implementação usando work trees inteligentes e entrega eficiente de tarefas.",
+   aiDebugging: "Debug Inteligente",
+   aiDebuggingDesc: "Meu copiloto IA ajuda a detectar erros, validar testes e garantir qualidade de código em cada etapa.",
+   aiDocumentation: "Documentação & Changelogs",
+   aiDocumentationDesc: "Automatizando escrita de documentação e geração de changelog para melhor rastreamento de projeto.",
+   aiImprovementPercent: "60% de melhoria no tempo",
+   aiImprovementDesc: "Melhoria média na entrega de tarefas e eficiência na resolução de problemas",
 
-  // Misc
-  loading: "Carregando...",
-  switchLanguage: "English",
+   aiCreative: "Soluções Criativas & Design",
+   aiCreativeDesc: "Transformando ideias em UI/UX polida através de design assistido por IA e desenvolvimento de componentes.",
+   aiIdeas: "Brainstorm de Design",
+   aiIdeasDesc: "Usando IA para gerar ideias e soluções abrangentes de experiência do usuário evitando bugs e brechas de segurança.",
+   aiFigmaClaudeIntegration: "Integração Figma + Claude",
+   aiFigmaClaudeIntegrationDesc: "Fluxo de design aprimorado de componentes e páginas com prototipagem visual assistida por IA.",
+   aiPRReviewer: "PR Review Automatizado",
+   aiPRReviewerDesc: "Revisor Claude customizado analisando PRs com feedback detalhado, resumo de mudanças e scoring de produção (0-5). Merge apenas com score 5.",
 
-  // Language key for TravelSection to use
-  language: "pt-BR",
+   aiProductivity: "Automação de Pesquisa & Produtividade",
+   aiProductivityDesc: "Construindo sistemas de automação inteligentes que reduzem trabalho manual e capturam erros de produção antes que importem.",
+   aiSentryAutomation: "Automação de Issues do Sentry",
+   aiSentryAutomationDesc: "Validação diária de issues de produção às 9 AM (dias da semana). Cria automaticamente tarefas Jira, correções e testes com vitest.",
+   aiMCPIntegration: "Integração de Contexto MCP",
+   aiMCPIntegrationDesc: "Compreensão aprimorada de contexto de IA com acesso mais profundo a logs e sinais do sistema.",
+   aiAlignmentApproach: "Abordagem Primeira Compreensão",
+   aiAlignmentApproachDesc: "Sempre entendendo passos da IA e seguindo fluxos para manter alinhamento com soluções geradas por IA.",
+
+   aiTools: "Ferramentas & Plataformas de IA que Uso",
+   aiClaude: "Claude",
+   aiGithubCopilot: "GitHub Copilot",
+   aiCodex: "Codex",
+   aiChatGPT: "ChatGPT",
+   aiMCPIntegrations: "Integrações MCP",
+   aiSentryMCP: "Sentry MCP",
+   aiSignozMCP: "Signoz MCP",
+   aiJiraMCP: "Jira MCP",
+
+   aiAchievement: "Conquistas Principais",
+   aiAchievementDesc: "Transformando qualidade de código e confiabilidade em produção através de automação inteligente",
+   aiEvents185k: "185K",
+   aiEventsBefore: "eventos de erro antes",
+   aiEventsAfter: "eventos de erro após 3 meses",
+   aiPRReviewAchievement: "Sistema de Review de PR Inteligente",
+   aiPRReviewDesc: "Revisor Claude customizado automatizando checks de qualidade de código em cada PR com feedback detalhado, sistema de scoring (0-5) e validação de produção.",
+   aiPRDesignFeatures: "Análise Automatizada",
+
+   // Footer
+   copyright: "Todos os direitos reservados.",
+   designedBy: "Projetado & Desenvolvido com ♥ por GG.",
+
+   // Misc
+   loading: "Carregando...",
+   switchLanguage: "English",
+
+   // Language key for TravelSection to use
+   language: "pt-BR",
 };
